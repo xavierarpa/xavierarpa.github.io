@@ -6,7 +6,7 @@
         <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<meta name="description" content="Shallow Red">
+<meta name="description" content="Notes">
 <meta name="author" content="Alexander Ameye">
 
 <!-- Tells Google not to provide a translation for this document -->
@@ -16,22 +16,22 @@
 <meta name="generator" content="eleventy">
 
 <!-- Open graph -->
-<meta property="og:title" content="Shallow Red">
-<meta property="og:description" content="Shallow Red">
+<meta property="og:title" content="Notes">
+<meta property="og:description" content="Notes">
 <meta property="og:type" content="article">
-<meta property="og:image" content="undefined/projects/chess-engine/cover.png"/>
+<meta property="og:image" content="undefined/notes/cover.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="675"/>
 
 <!-- Twitter -->
-<meta name="twitter:title" content="Shallow Red">
+<meta name="twitter:title" content="Notes">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@alexanderameye">
-<meta name="twitter:description" content="Shallow Red">
-<meta name="twitter:image" content="https://alexanderameye.github.io/projects/chess-engine/cover.png">
+<meta name="twitter:description" content="Notes">
+<meta name="twitter:image" content="https://alexanderameye.github.io/notes/cover.png">
 <meta name="twitter:creator" content="@alexanderameye">
 
-<title>Shallow Red</title>
+<title>Notes</title>
 
 <!-- CSS -->
 <link rel="preload" href="/assets/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -53,7 +53,7 @@
         onload="renderMathInElement(document.body);"></script>
 
 <!-- ICONS -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2224%22 font-size=%2224%22>👑</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2224%22 font-size=%2224%22>🖍️</text></svg>">
 <link rel="preload" as="font" href="/assets/fonts/icons.woff2?7673508" type="font/woff2" crossorigin="crossorigin"/>
 
 <!-- INLINED GOOGLE FONTS -->
@@ -102,16 +102,10 @@
     <!-- BODY -->
     <body class="fade-in">
             
-<style>
-    :root {
-        --marker-color: var(--);
-    }
-</style>
-
 <header id="navbar-desktop" class="sticky py-100">
   <nav class="navbar-nav">
     <!--<a href="/" aria-label="Home page." class="hover-highlight  navbar-element" style="--highlighter-color: 235, 204, 255; --navbar-element-color: #803fab">/ home</a>-->
-    <a href="/notes" aria-label="All notes." class="hover-highlight  navbar-element" style="--highlighter-color: 185,231,236; --navbar-element-color: #0b85ff">/ notes</a>
+    <a href="/notes" aria-label="All notes." class="hover-highlight navbar-element-active navbar-element" style="--highlighter-color: 185,231,236; --navbar-element-color: #0b85ff">/ notes</a>
     <a href="/about" aria-label="About me." class="hover-highlight  navbar-element" style="--highlighter-color: 255, 234, 71; --navbar-element-color: #f4ad43">/ about</a>
   </nav>
 </header>
@@ -121,7 +115,7 @@
 <header id="navbar-mobile" class="sticky py-100">
    <nav class="navbar-nav">
     <!--<a href="/" aria-label="Home page." class="hover-highlight  navbar-element" style="--highlighter-color: 235, 204, 255; --navbar-element-color: #803fab">/ home</a>-->
-    <a href="/notes" aria-label="All notes." class="hover-highlight  navbar-element" style="--highlighter-color: 185,231,236; --navbar-element-color: #0b85ff">/ notes</a>
+    <a href="/notes" aria-label="All notes." class="hover-highlight navbar-element-active navbar-element" style="--highlighter-color: 185,231,236; --navbar-element-color: #0b85ff">/ notes</a>
     <a href="/about" aria-label="About me." class="hover-highlight  navbar-element" style="--highlighter-color: 255, 234, 71; --navbar-element-color: #f4ad43">/ about</a>
   </nav>
 
@@ -131,52 +125,369 @@
 
 
 
-<div class="left-section">
-    <div class="left-section-content">
-        <h2 style="text-align: center">Shallow Red</h2>
-        <img src="https://picsum.photos/200/300" alt="A random image">
-        <p>A C++ chess engine</p>
-    </div>
-</div>
-<div class="right-section">
-    <div class="column-page-content note-content">
-        <h2 id="shallow-red" tabindex="-1"><a class="anchor-link" href="#shallow-red" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Shallow Red</h2>
-<p>In this tutorial I will explain step-by-step how to create a beautiful stylized water shader in Unity using Shader Graph. The goal is not to generate a physically accurate result, but rather to achieve a <mark>real-time, controllable and good-looking</mark> stylized water shader.</p>
-<p>// TODO: Add video of end result.</p>
-<h2 id="1.-requirements-and-initial-set-up" tabindex="-1"><a class="anchor-link" href="#1.-requirements-and-initial-set-up" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> 1. Requirements and initial set up</h2>
-<blockquote>
-<p>This tutorial has been made with <em><strong>Unity 2022.2.6f1</strong></em> and <em><strong>Universal RP 14.0.6</strong></em>.</p>
-</blockquote>
-<h3 id="required-settings" tabindex="-1"><a class="anchor-link" href="#required-settings" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Required settings</h3>
-<p>Before starting, make sure to enable the <em><strong>depth/opaque textures</strong></em> in the URP pipeline asset settings in your project.</p>
-<p>// TODO: Add image of opaque and depth texture toggled on</p>
-<h3 id="initial-setup" tabindex="-1"><a class="anchor-link" href="#initial-setup" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Initial setup</h3>
-<p>First, we create a new <em><strong>Unlit Shader Graph shader</strong></em>. The shader material should be set the <em><strong>Unlit</strong></em> and the surface type to <em><strong>Opaque</strong></em>.</p>
-<h3 id="required-settings-1" tabindex="-1"><a class="anchor-link" href="#required-settings-1" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Required settings</h3>
-<p>Before starting, make sure to enable the <em><strong>depth/opaque textures</strong></em> in the URP pipeline asset settings in your project.</p>
-<p>// TODO: Add image of opaque and depth texture toggled on</p>
-<h3 id="initial-setup-1" tabindex="-1"><a class="anchor-link" href="#initial-setup-1" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Initial setup</h3>
-<p>First, we create a new <em><strong>Unlit Shader Graph shader</strong></em>. The shader material should be set the <em><strong>Unlit</strong></em> and the surface type to <em><strong>Opaque</strong></em>.</p>
+<div class="column-page">
+  <div class="column-page-content">
+    <h2>Notas</h2>
+    
+    <p>Esto es un testeo.</p>
+    <ul class="note-tags" style="margin-bottom: 30px;">
+      <!-- <li>
+        <a style="--tag-bg: #f9f0ff; --tag-text: #936bad;" href="/tags/AI">AI
+          <sup>1</sup>
+        </a>
+      </li> -->
+      <!-- <li>
+        <a style="--tag-bg: #ffeaea; --tag-text: #f16f87;" href="/tags/programming">programming
+          <sup>3</sup>
+        </a>
+      </li> -->
+      <!-- <li>
+        <a style="--tag-bg: #e1f5f6; --tag-text: #0885ff;" href="/tags/graphics">graphics
+          <sup>10</sup>
+        </a>
+      </li> -->
+      <li>
+        <a style="--tag-bg: #eafff3; --tag-text: #61b58e;" href="/tags/unity">unity
+          <sup>8</sup>
+        </a>
+      </li>
+      <li>
+        <a style="--tag-bg: #fef9d3; --tag-text: #f4ad44;" href="/tags/gamedev">gamedev
+          <sup>5</sup>
+        </a>
+      </li>
+      <!-- <li>
+        <a style="--tag-bg: #f9f0ff; --tag-text: #936bad;" href="/tags/tutorial">tutorial
+          <sup>2</sup>
+        </a>
+      </li>
+      <li>
+        <a style="--tag-bg: #f1f1f1; --tag-text: #7b7575;" href="/tags/math">math
+          <sup>2</sup>
+        </a>
+      </li> -->
+    </ul>
+    
 
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🖨️</span>
+            Comic book shader effect
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>How I made a halftone print shading effect in Unity.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>March 2023</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/halftone-shader/cover.png" alt="'Comic book shader effect' cover image.">
+        
+
+      </div>
     </div>
+    <a class="note-entry-link" aria-label="Comic book shader effect" href="/notes/halftone-shader/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <!-- <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🔆</span>
+            My first path tracer
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>My first steps writing an offline renderer in Rust.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>July 2022</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/path-tracer/cover.png" alt="'My first path tracer' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="My first path tracer" href="/notes/path-tracer/"></a>
+  </article> -->
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🎯</span>
+            Sampling the hemisphere
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Hemisphere sampling schemes for use in graphics programming.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>May 2022</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/sampling-the-hemisphere/cover.png" alt="'Sampling the hemisphere' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Sampling the hemisphere" href="/notes/sampling-the-hemisphere/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>👑</span>
+            Writing a chess engine in C++
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Chess engine programming by someone who is bad at chess.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>March 2022</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/chess-engine/cover.png" alt="'Writing a chess engine in C++' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Writing a chess engine in C++" href="/notes/chess-engine/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🌈</span>
+            Rendering realtime caustics
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>How to render realtime caustics in Unity using Shader Graph.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>March 2022</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/realtime-caustics/cover.png" alt="'Rendering realtime caustics' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Rendering realtime caustics" href="/notes/realtime-caustics/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🖍️</span>
+            5 ways to draw an outline
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Different techniques for rendering outline effects.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>August 2021</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/rendering-outlines/cover.png" alt="'5 ways to draw an outline' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="5 ways to draw an outline" href="/notes/rendering-outlines/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>📝</span>
+            Custom render passes in Unity
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Writing custom render passes in Unity URP.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>July 2021</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/scriptable-render-passes/cover.png" alt="'Custom render passes in Unity' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Custom render passes in Unity" href="/notes/scriptable-render-passes/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>💦</span>
+            Stylized Water Shader
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>About my stylized water shader for Unity.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>June 2021</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/stylized-water/cover.png" alt="'Stylized Water Shader' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Stylized Water Shader" href="/notes/stylized-water/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>⏳</span>
+            Shader tutorials in 60 seconds
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Short and sweet shader tutorials.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>April 2020</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/shaders-done-quick/cover.png" alt="'Shader tutorials in 60 seconds' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Shader tutorials in 60 seconds" href="/notes/shaders-done-quick/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🃏</span>
+            Holographic Card Shader
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>How I created a holographic Pokémon card shader.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>February 2020</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/holographic-card-shader/cover.png" alt="'Holographic Card Shader' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Holographic Card Shader" href="/notes/holographic-card-shader/"></a>
+  </article>
+
+
+
+  <!-- NOTE ENTRY -->
+  <article class="note-entry">
+    <div class="note-entry-grid">
+      <div class="note-entry-main">
+        <header class="note-entry-header">
+          <h3>
+            <span>🖍️</span>
+            Edge Detection Outlines
+          </h3>
+        </header>
+        <section class="note-entry-description">
+          <p>Drawing outlines as a post-processing effect in Unity.</p>
+        </section>
+        <footer class="note-entry-footer">
+          <time>January 2020</time>
+        </footer>
+      </div>
+      <div class="note-entry-image">
+         
+          <img src="/notes/edge-detection-outlines/cover.png" alt="'Edge Detection Outlines' cover image.">
+        
+
+      </div>
+    </div>
+    <a class="note-entry-link" aria-label="Edge Detection Outlines" href="/notes/edge-detection-outlines/"></a>
+  </article>
+
+
+  </div>
 </div>
     </body>
 </html>

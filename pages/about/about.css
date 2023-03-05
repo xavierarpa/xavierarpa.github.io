@@ -1009,6 +1009,19 @@ summary:hover {
     background-color: #000
 }
 
+
+.timeline-li.timeline-li-cancel {
+    padding-bottom: 15px
+}
+.timeline-li.timeline-li-cancel:not(:last-child)::before {
+    border-left: 3px solid #000
+}
+.timeline-li.timeline-li-cancel::after {
+    font-size: 10px;
+    border: 2px solid #000;
+    background-color: #ff0000
+}
+
 .left-section {
     margin-top: 122px;
     float: left;

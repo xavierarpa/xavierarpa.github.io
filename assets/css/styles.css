@@ -1084,21 +1084,21 @@ summary:hover {
     margin-bottom: 40px;
 }
 
-.timeline-list {
+.timeline-ul {
     position: relative;
     padding-left: 45px;
     list-style: none;
 }
 
 
-.timeline-event p {
+.timeline-li p {
     position: relative;
     top: -5px;
     margin: 0px;
     text-align: left;
 }
 
-.timeline-event .mini {
+.timeline-li .mini {
     font-size: small;
     padding: 0px;
     margin: 0px;
@@ -1106,19 +1106,19 @@ summary:hover {
     color: rgb(110, 110, 110)
 }
 
-.timeline-event {
+.timeline-li {
     position: relative;
 }
 
-.timeline-event.is-not-done {
+.timeline-li.timeline-li-ko {
     padding-bottom: 30px;
 }
 
-.timeline-event.is-done {
+.timeline-li.timeline-li-ok {
     padding-bottom: 15px;
 }
 
-.timeline-event:before {
+.timeline-li:before {
     display: inline-block;
     content: '';
     position: absolute;
@@ -1127,7 +1127,7 @@ summary:hover {
     width: 10px;
 }
 
-.timeline-event::after {
+.timeline-li::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -1140,15 +1140,15 @@ summary:hover {
     background-color: #FFF;
 }
 
-.timeline-event.is-not-done::before {
+.timeline-li.timeline-li-ko::before {
     border-left: 3px dotted rgb(0, 0, 0);
 }
 
-.timeline-event.is-done:not(:last-child)::before {
+.timeline-li.timeline-li-ok:not(:last-child)::before {
     border-left: 3px solid rgb(0, 0, 0);
 }
 
-.timeline-event.is-done::after {
+.timeline-li.timeline-li-ok::after {
     font-size: 10px;
     border: 2px solid rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);

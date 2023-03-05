@@ -1,4 +1,4 @@
-<!-- Made by Alexander Ameye using pure html/css and eleventy ♥ -->
+<!-- This code is a modification of Xavier Arpa's page => https://_kingdox_.github.io/ -->
 <!DOCTYPE html>
 <html lang="en">
     <!-- HEAD -->
@@ -6,8 +6,8 @@
         <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<meta name="description" content="February 2023 devlog.">
-<meta name="author" content="Alexander Ameye">
+<meta name="description" content="March 2023 devlog.">
+<meta name="author" content="Xavier Arpa">
 
 <!-- Tells Google not to provide a translation for this document -->
 <meta name="google" content="notranslate">
@@ -16,22 +16,22 @@
 <meta name="generator" content="eleventy">
 
 <!-- Open graph -->
-<meta property="og:title" content="February 2023">
-<meta property="og:description" content="February 2023 devlog.">
+<meta property="og:title" content="March 2023">
+<meta property="og:description" content="March 2023 devlog.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="undefined/devlogs/february-2023/cover.png"/>
+<meta property="og:image" content="undefined/devlogs/march-2023/cover.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="675"/>
 
 <!-- Twitter -->
-<meta name="twitter:title" content="February 2023">
+<meta name="twitter:title" content="March 2023">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@alexanderameye">
-<meta name="twitter:description" content="February 2023 devlog.">
-<meta name="twitter:image" content="https://alexanderameye.github.io/devlogs/february-2023/cover.png">
-<meta name="twitter:creator" content="@alexanderameye">
+<meta name="twitter:site" content="@_kingdox_">
+<meta name="twitter:description" content="March 2023 devlog.">
+<meta name="twitter:image" content="https://kingdox.github.io/devlogs/march-2023/cover.png">
+<meta name="twitter:creator" content="@_kingdox_">
 
-<title>February 2023</title>
+<title>March 2023</title>
 
 <!-- CSS -->
 <link rel="preload" href="/assets/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -53,7 +53,7 @@
         onload="renderMathInElement(document.body);"></script>
 
 <!-- ICONS -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2224%22 font-size=%2224%22>🎨</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2224%22 font-size=%2224%22>🛠️</text></svg>">
 <link rel="preload" as="font" href="/assets/fonts/icons.woff2?7673508" type="font/woff2" crossorigin="crossorigin"/>
 
 <!-- INLINED GOOGLE FONTS -->
@@ -133,55 +133,19 @@
 
 <div class="note column-page">
     <div class="note-content column-page-content">
-        <h1 class="note-title">🎨
-            February 2023</h1>
-        <div class="note-subtitle"><p class="reading-time"><b>2</b> minute read</p></div>
-        <h2 id="it's-been-a-while" tabindex="-1"><a class="anchor-link" href="#it's-been-a-while" target="_blank" rel="noopener noreferrer">
+        <h1 class="note-title">🛠️
+            March 2023</h1>
+        <div class="note-subtitle"><p class="reading-time"><b>1</b> minute read</p></div>
+        <h2 id="tools%2C-tools%2C-tools" tabindex="-1"><a class="anchor-link" href="#tools%2C-tools%2C-tools" target="_blank" rel="noopener noreferrer">
                   <span class="screen-reader-only">Jump to heading</span>
                   <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> It's been a while</h2>
-<p>I feel bad that it has been almost a year since my previous short devlog. It did work on the project since then. Mostly work related the outlining render system I want to set up.</p>
-<h2 id="sectioning-tools" tabindex="-1"><a class="anchor-link" href="#sectioning-tools" target="_blank" rel="noopener noreferrer">
+                </a> Tools, tools, tools</h2>
+<p>This month I continued to work on <mark>art-style related tooling</mark> for my game project.</p>
+<h2 id="section-painter-improvements" tabindex="-1"><a class="anchor-link" href="#section-painter-improvements" target="_blank" rel="noopener noreferrer">
                   <span class="screen-reader-only">Jump to heading</span>
                   <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Sectioning tools</h2>
-<p>As you may (not) know, I render outlines in my project by making use of what I call a <mark>Sectioning Texture</mark>. Here is an example of what such a texture looks like.</p>
-<p><picture><source type="image/webp" srcset="sectioning-texture.webp-400w.webp 400w, sectioning-texture.webp-800w.webp 800w, sectioning-texture.webp-1200w.webp 1200w, sectioning-texture.webp-1655w.webp 1655w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="sectioning-texture.webp-400w.jpeg 400w, sectioning-texture.webp-800w.jpeg 800w, sectioning-texture.webp-1200w.jpeg 1200w, sectioning-texture.webp-1655w.jpeg 1655w" sizes="(min-width: 30em) 50vw, 100vw"><img class="note-image" alt="Stylized water reflections." style="width:60%;" loading="lazy" decoding="async" src="sectioning-texture.webp-400w.jpeg" width="1655" height="998"></picture></p>
-<p>I want to be able to author this texture as easily and automatically as possible. I have created a few tools for this.</p>
-<h3 id="section-marker" tabindex="-1"><a class="anchor-link" href="#section-marker" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Section Marker</h3>
-<p>The first tool was made to automatically assign a vertex color to triangles of an object. This is done by the <mark>Section Marker</mark> tool I created. It does this by checking which triangles form an <mark>island</mark> with should receive the same color. This done based on the orientation of the triangles. Here is the tool in action.</p>
-<video controls poster="reflections.png" preload="auto" width="75%" title="Section marker tool." loop="" autoplay="" playsinline="" muted="true" class="note-video">
-<source src="section-marker.mp4" type="video/webm">
-</video>
-<h3 id="section-painter" tabindex="-1"><a class="anchor-link" href="#section-painter" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Section Painter</h3>
-<p>Next, I found that I wanted to create finer detail within the sectioning texture. Instead of using only vertex colors, I created the <mark>Section Painter</mark> tool which allows me to paint the sectioning texture right onto a mesh. Here is the tool in action.</p>
-<video controls poster="reflections.png" preload="auto" width="75%" title="Section marker tool." loop="" autoplay="" playsinline="" muted="true" class="note-video">
-<source src="section-painter.webm" type="video/webm">
-</video>
-<p>Right now the outlines that the painter generates are a bit jagged but this wil be fixed later.</p>
-<h2 id="general-plumbing" tabindex="-1"><a class="anchor-link" href="#general-plumbing" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> General plumbing</h2>
-<p>Other than working on tooling for the sectioning and outlining pipeline, I also worked on just some general game systems and plumbing as a preparation for creating real gameplay systems. This includes things such as:</p>
-<ul>
-<li>A first person controller</li>
-<li>Basic camera movement</li>
-<li>A UI controller</li>
-<li>An input manager with support for gamepads</li>
-</ul>
-<p>All of these are implemented in a very basic way for now but I just wanted to get some things started. I also read a lot of articles about game architecture in Unity (design patterns, singletons, scriptable objects etc.).</p>
-<h2 id="devlogs" tabindex="-1"><a class="anchor-link" href="#devlogs" target="_blank" rel="noopener noreferrer">
-                  <span class="screen-reader-only">Jump to heading</span>
-                  <span aria-hidden="true" class="anchor-symbol">#</span>
-                </a> Devlogs</h2>
-<p>I updated my website this month and removed a whole ton of crap. These devlogs can be found on the website already but <mark>I am not linking publicly to them for now</mark>. I am hoping to write one of these every month containing the things I worked on during the last 30 days. Eventually I think I might make a devlogs section on the website so that people can more easily see them.</p>
+                </a> Section painter improvements</h2>
+<p>I made a few improvements to the section painter which practically allows me to <mark>paint outlines right inside of the editor</mark>.</p>
 
 
         <div id="back-to-top-desktop" class="back-to-top-desktop">
@@ -204,11 +168,11 @@
     <ul class="note-tags"></ul>
 
    <!-- <div>
-        <a href="https://twitter.com/alexanderameye" rel="noopener" target="_blank" aria-label="Alexander Ameye Twitter.">
+        <a href="https://twitter.com/_kingdox_" rel="noopener" target="_blank" aria-label="Xavier Arpa Twitter.">
             <span class="icon-twitter footer-icon"></span></a>
-        <a href="https://www.linkedin.com/in/alexander-ameye-067a0b70/" rel="noopener" target="_blank" aria-label="Alexander Ameye LinkedIn.">
+        <a href="https://www.linkedin.com/in/alexander-ameye-067a0b70/" rel="noopener" target="_blank" aria-label="Xavier Arpa LinkedIn.">
             <span class="icon-linkedin footer-icon"></span></a>
-        <a href="https://github.com/alexanderameye" rel="noopener" target="_blank" aria-label="Alexander Ameye GitHub.">
+        <a href="https://github.com/_kingdox_" rel="noopener" target="_blank" aria-label="Xavier Arpa GitHub.">
             <span class="icon-github footer-icon"></span></a>
     </div>-->
 </footer>

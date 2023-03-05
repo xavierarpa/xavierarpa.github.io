@@ -1014,7 +1014,7 @@ summary:hover {
     padding-bottom: 15px
 }
 .timeline-li.timeline-li-cancel:not(:last-child)::before {
-    border-left: 3px dashed #ff0000
+    border-left: 3px dashed #000000
 }
 .timeline-li.timeline-li-cancel::after {
     font-size: 10px;

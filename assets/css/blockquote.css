@@ -1,0 +1,24 @@
+blockquote {
+    box-sizing: border-box;
+    font-style: italic;
+    color: #494949;
+    background-color: rgba(230, 230, 230, .5);
+    border-color: #000;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 8px 16px
+}
+
+.column-page-content blockquote p {
+    margin: 0;
+    text-align: left
+}
+
+.column-page-content blockquote:hover {
+    outline-offset: 0;
+    animation: pulse 1s ease-out infinite forwards;
+    z-index: 1000
+}

@@ -125,24 +125,6 @@ p {
     font-weight: 400
 }
 
-.katex-display .katex {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 2px dashed #cacaca;
-    border-radius: 5px
-}
-
-.katex-display>.katex {
-    white-space: nowrap;
-    text-align: initial
-}
-
-.katex {
-    line-height: 1.2;
-    white-space: normal;
-    text-indent: 0
-}
-
 blockquote {
     box-sizing: border-box;
     font-style: italic;
@@ -180,15 +162,15 @@ blockquote {
     }
 }
 
-.note-date {
+/* .note-date {
     margin-top: 50px;
     padding-bottom: 0;
     margin-bottom: 0;
     font-size: smaller;
     font-family: arial-rounded-bold
-}
+} */
 
-.note-footer {
+/* .note-footer {
     grid-area: footer;
     background-color: var(--base-color);
     border-top: 2px dashed var(--gray);
@@ -197,12 +179,11 @@ blockquote {
     display: flex;
     align-items: center;
     justify-content: space-between
-}
+} */
 
-.note-tags {
+/* .note-tags {
     padding: 0
 }
-
 .note-tags a {
     display: block;
     padding-inline-start: 10px;
@@ -218,29 +199,24 @@ blockquote {
     font-family: arial-rounded-bold;
     box-shadow: 1px 1px
 }
-
 .note-tags a:before {
     content: "#";
     margin-right: .25rem
 }
-
 .note-tags a:hover {
     transform: scale(1.05)
 }
-
 .note-tags sup {
     font-size: xx-small;
     vertical-align: super
 }
-
 .note-tags li {
     display: inline-block;
     padding-right: 10px;
     padding-bottom: 5px;
     padding-top: 5px
-}
-
-.tag {
+} */
+/* .tag {
     display: inline-block;
     padding: .25rem .75rem;
     margin: 1rem .5rem 0 0;
@@ -252,22 +228,13 @@ blockquote {
     position: relative;
     top: 0;
     transition: .35s
-}
-
-.menu ul {
+} */
+/* .menu ul {
     list-style-type: none;
     margin-right: 20px;
     margin-left: 20px;
     padding: 0
 }
-
-ul {
-    padding-inline-start: 20px;
-    padding-bottom: 10px;
-    margin-block-start: 0px;
-    margin-block-end: 0px
-}
-
 .menu ul li {
     text-align: right;
     font-family: Inter, serif;
@@ -275,7 +242,6 @@ ul {
     padding-top: 10px;
     padding-bottom: 10px
 }
-
 .menu {
     text-align: right;
     display: none;
@@ -288,10 +254,21 @@ ul {
     top: 65px;
     bottom: 0
 }
-
 .menu a {
     text-decoration: none;
     color: #000
+} */
+/* .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2
+} */
+
+ul {
+    padding-inline-start: 20px;
+    padding-bottom: 10px;
+    margin-block-start: 0px;
+    margin-block-end: 0px
 }
 
 #toggle {
@@ -300,12 +277,6 @@ ul {
 
 #toggle:checked+#menu {
     display: flex
-}
-
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 2
 }
 
 #navbar-desktop {

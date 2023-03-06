@@ -1,0 +1,454 @@
+
+.note-content h1 {
+text-align: center;
+margin-top: 20px;
+margin-bottom: 15px
+}
+.note-content h3 {
+margin-top: 40px;
+margin-bottom: 15px
+}
+.note-content h4 {
+margin-top: 40px;
+margin-bottom: 5px;
+font-size: 15px
+}
+.note-content {
+background-color: var(--base-color)
+}
+.note-content .download-button {
+display: inline-block;
+padding: .25rem .5rem;
+border-radius: 0;
+border: 2px dashed #000;
+font-size: smaller
+}
+.note-content iframe {
+padding: 0;
+margin: 0;
+width: 100%;
+display: block
+} 
+
+.note-date {
+margin-top: 50px;
+padding-bottom: 0;
+margin-bottom: 0;
+font-size: smaller;
+font-family: arial-rounded-bold
+} 
+
+.note-footer {
+grid-area: footer;
+background-color: var(--base-color);
+border-top: 2px dashed var(--gray);
+margin-top: 20px;
+padding-top: .8rem;
+display: flex;
+align-items: center;
+justify-content: space-between
+} 
+
+.note-tags {
+padding: 0
+}
+.note-tags a {
+display: block;
+padding-inline-start: 10px;
+padding-inline-end: 10px;
+font-size: 14px;
+line-height: 30px;
+text-decoration: none;
+background-color: var(--tag-bg);
+border: 2px solid var(--tag-text);
+color: var(--tag-text);
+border-radius: 10px;
+transition: transform .1s;
+font-family: arial-rounded-bold;
+box-shadow: 1px 1px
+}
+.note-tags a:before {
+content: "#";
+margin-right: .25rem
+}
+.note-tags a:hover {
+transform: scale(1.05)
+}
+.note-tags sup {
+font-size: xx-small;
+vertical-align: super
+}
+.note-tags li {
+display: inline-block;
+padding-right: 10px;
+padding-bottom: 5px;
+padding-top: 5px
+} 
+.tag {
+display: inline-block;
+padding: .25rem .75rem;
+margin: 1rem .5rem 0 0;
+font-size: 1rem;
+font-family: Inter, sans-serif;
+line-height: 130%;
+border-radius: .5rem;
+text-decoration: none;
+position: relative;
+top: 0;
+transition: .35s
+} 
+.menu ul {
+list-style-type: none;
+margin-right: 20px;
+margin-left: 20px;
+padding: 0
+}
+.menu ul li {
+text-align: right;
+font-family: Inter, serif;
+font-size: 1.2em;
+padding-top: 10px;
+padding-bottom: 10px
+}
+.menu {
+text-align: right;
+display: none;
+position: absolute;
+background-color: var(--base-color);
+box-shadow: -10px 0 30px -15px #0000002b;
+right: 0;
+position: fixed;
+z-index: 499;
+top: 65px;
+bottom: 0
+}
+.menu a {
+text-decoration: none;
+color: #000
+} 
+
+
+
+
+.sticky {
+position: -webkit-sticky;
+position: sticky;
+z-index: 2
+} 
+
+
+
+
+
+.navigation {
+flex: 1
+}
+.navigation ul {
+justify-content: space-between;
+display: flex;
+list-style-type: none;
+margin: 0;
+padding: 0
+}
+.navigation ul a {
+text-decoration: none;
+display: flex;
+color: #000
+} 
+
+
+.wide-column-page {
+background-color: var(--base-color);
+padding-bottom: 50px;
+display: grid;
+grid-template-areas: "left content right""left footer right"
+}
+
+.wide-column-page-content {
+background-color: var(--base-color);
+grid-area: content;
+text-align: justify;
+position: relative
+} 
+
+
+
+.notes-list {
+text-align: right;
+grid-area: left;
+list-style-position: inside;
+list-style: none;
+margin: 0;
+padding: 0
+}
+
+.notes-list-link {
+text-align: right
+}
+
+.notes-list-link a {
+text-decoration: none;
+color: inherit
+}
+
+.notes-list-link a:hover {
+font-weight: 700;
+font-style: normal
+} 
+
+
+.download-button {
+display: inline-block;
+padding: .25rem .5rem;
+border-radius: 0;
+border: 2px dashed #000;
+font-size: smaller;
+text-decoration: none;
+color: inherit
+}
+
+.download-button:hover {
+background-color: var(--link-hover-color);
+color: #fff;
+transition: color .2s ease;
+font-weight: 700;
+opacity: 1
+} 
+
+
+.menu li .resume-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    line-height: 1em;
+    padding: 8px 0 8px 10px;
+    align-items: center;
+    font-size: small;
+    z-index: 400
+}
+
+.portfolio-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-right: 10px;
+    padding: 4px 0 4px 10px;
+    align-items: center;
+    font-size: small;
+    display: flex
+}
+
+.portfolio-icon {
+    margin-left: 3px;
+    margin-right: 4px
+}
+
+[class*=" icon-"].portfolio-icon::before,
+[class^=icon-].portfolio-icon::before {
+    font-size: 16px
+}
+
+[class*=" icon-"].tags-icon::before,
+[class^=icon-].tags-icon::before {
+    font-size: 16px
+}
+
+.navbar-icon {
+    color: #000;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+
+.token.cdata,
+.token.comment,
+.token.prolog {
+    color: #637777;
+    font-style: italic
+}
+
+.token.punctuation {
+    color: #c792ea
+}
+
+.namespace {
+    color: #b2ccd6
+}
+
+.token.deleted {
+    color: rgba(239, 83, 80, .56);
+    font-style: italic
+}
+
+.token.property,
+.token.symbol {
+    color: #80cbc4
+}
+
+.token.keyword,
+.token.operator,
+.token.tag {
+    color: #7fdbca
+}
+
+.token.boolean {
+    color: #ff5874
+}
+
+.token.number {
+    color: #f78c6c
+}
+
+.token.builtin,
+.token.char,
+.token.constant,
+.token.function {
+    color: #82aaff
+}
+
+.token.doctype,
+.token.selector {
+    color: #c792ea;
+    font-style: italic
+}
+
+.token.attr-name,
+.token.inserted {
+    color: #addb67;
+    font-style: italic
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.string,
+.token.url {
+    color: #addb67
+}
+
+.token.atrule,
+.token.attr-value,
+.token.class-name {
+    color: #ffcb8b
+}
+
+.token.important,
+.token.regex,
+.token.variable {
+    color: #d6deeb
+}
+
+.token.bold,
+.token.important {
+    font-weight: 700
+}
+
+.token.italic {
+    font-style: italic
+}
+
+
+.px-50 {
+    padding-left: .5rem;
+    padding-right: .5rem
+}
+
+.px-75 {
+    padding-left: .75rem;
+    padding-right: .75rem
+}
+
+.px-150 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+}
+
+.py-50 {
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.py-75 {
+    padding-top: .75rem;
+    padding-bottom: .75rem
+}
+
+.py-100 {
+    padding-top: 1rem;
+    padding-bottom: 1rem
+}
+
+.note-entry-header h3 {
+    padding-top: 0
+}
+
+.note-entry-header span {
+    padding-right: 5px
+}
+
+.note-entry-content h3 {
+    padding-bottom: 0
+}
+
+
+.project-entry {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    transition: transform .2s;
+    border: 1px solid #f0f0f0
+}
+
+.project-entry-image {
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+    object-fit: cover;
+    width: 100%
+}
+
+.project-entry:active {
+    transform: scale(.95)
+}
+
+.project-entry-content {
+    padding: 15px
+}
+
+.project-entry-description {
+    margin: 8px 0;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.project-entry-footer {
+    color: var(--gray);
+    font-size: 12px
+}
+
+.project-entry-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+
+.projects {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+
+.project-image {
+    border-radius: 10px
+}

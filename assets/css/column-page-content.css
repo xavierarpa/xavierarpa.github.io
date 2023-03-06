@@ -1,0 +1,38 @@
+
+
+.column-page-content h2 {
+    margin-top: 40px;
+    margin-bottom: 15px
+}
+.column-page-content p {
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: Inconsolata, monospace;
+    text-align: justify;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 1.6em;
+    overflow-wrap: break-word
+}
+.column-page-content p a {
+    text-decoration: none;
+    border-bottom: 2px dotted #000;
+    opacity: 1;
+    color: #000
+}
+.column-page-content p a:hover {
+    background-color: var(--link-hover-color);
+    color: #fff;
+    transition: color .2s ease;
+    font-weight: 700;
+    opacity: 1
+}
+.column-page-content {
+    grid-area: content;
+    position: relative
+}
+.column-page-content .action-button p {
+    text-align: center;
+    margin: 0
+}

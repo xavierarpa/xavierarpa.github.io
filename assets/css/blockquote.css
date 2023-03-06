@@ -11,14 +11,3 @@ blockquote {
     margin-bottom: 15px;
     padding: 8px 16px
 }
-
-.column-page-content blockquote p {
-    margin: 0;
-    text-align: left
-}
-
-.column-page-content blockquote:hover {
-    outline-offset: 0;
-    animation: pulse 1s ease-out infinite forwards;
-    z-index: 1000
-}

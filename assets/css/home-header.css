@@ -1,0 +1,23 @@
+/* home-header.css */
+
+.home-header {
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.home-header h2 {
+    padding: 0;
+    margin: 0;
+    text-align: left
+}
+
+.home-header img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 0
+}

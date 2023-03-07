@@ -1131,3 +1131,183 @@ pre::-webkit-scrollbar-thumb {
 pre::-webkit-scrollbar-thumb:hover {
     background: #969696
 }
+
+
+@keyframes pulse {
+    0% {
+        outline-offset: 0;
+        outline: solid 4px rgba(160, 160, 160, .5)
+    }
+
+    100% {
+        outline-offset: 8px;
+        outline: solid 2px rgb(255, 255, 255, 0)
+    }
+}
+
+
+
+
+#toggle {
+    display: none
+}
+
+#toggle:checked+#menu {
+    display: flex
+}
+
+#navbar-desktop {
+    background-color: var(--base-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+#navbar-desktop[stuck] {
+    opacity: 0;
+    transition: opacity 1s, transform 1.3s
+}
+
+#navbar-mobile {
+    background-color: var(--base-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+
+#profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px
+}
+
+summary {
+    list-style: none;
+    border: 2px solid #000;
+    padding: .75em 1em;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+    padding-left: calc(1.75rem + .75rem + .75rem)
+}
+
+summary:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .75rem;
+    content: "↓";
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #000;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0
+}
+
+details[open] summary {
+    background-color: #e7e7e7
+}
+
+details[open] summary:before {
+    content: "↑"
+}
+
+details div {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 1em
+}
+
+details {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+summary:hover {
+    background-color: #e7e7e7
+}
+
+@font-face {
+    font-family: icons;
+    src: url('/assets/fonts/icons.woff2?7673508') format('woff2'), url('/assets/fonts/icons.woff?7673508') format('woff'), url('/assets/fonts/icons.svg?7673508#icons') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+.footer-icon {
+    color: #bebebe
+}
+
+.footer-icon:hover {
+    color: #3c3c3c
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+    font-family: icons;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: inherit;
+    font-size: 24px;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@font-face {
+    font-family: arial-rounded-regular;
+    src: url('/assets/fonts/arial-rounded.woff2') format('woff2'), url('/assets/fonts/arial-rounded.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: arial-rounded-bold;
+    src: url('/assets/fonts/arial-rounded-bold.woff2') format('woff2'), url('/assets/fonts/arial-rounded-bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+
+::-webkit-scrollbar {
+    width: 22px
+}
+
+::-webkit-scrollbar-track {
+    background: 0 0
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border: 5px solid var(--base-color);
+    border-radius: 8px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .25)
+}

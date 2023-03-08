@@ -25,7 +25,27 @@
 
 body 
 {
+    background-color: black;
+	color: white;
+	/* font-family: Arial, sans-serif; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+#container 
+{
+	margin: 0 auto;
+	max-width: 600px;
+	text-align: center;
+}
+
+button {
+	background-color: white;
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
 }
 
 body,
@@ -67,31 +87,3 @@ li {
     letter-spacing: .02em;
     line-height: 1.6em
 }
-
-
-/* 
-
-
-body {
-	background-color: black;
-	color: white;
-	font-family: Arial, sans-serif;
-}
-
-#container {
-	margin: 0 auto;
-	max-width: 600px;
-	text-align: center;
-}
-
-button {
-	background-color: white;
-	color: black;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	font-size: 18px;
-	cursor: pointer;
-}
-
-*/

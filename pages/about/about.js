@@ -1,6 +1,7 @@
 // Aquí va todo el código JS
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("about.js");
+    console.log("____");
     // var body = document.body;
     // if (body.style.backgroundColor === "black") {
     //     body.style.backgroundColor = "white";

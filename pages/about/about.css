@@ -46,7 +46,8 @@ p {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     -moz-hyphens: auto;
-    hyphens: auto
+    hyphens: auto;
+    margin: 0;
 }
 
 ul {

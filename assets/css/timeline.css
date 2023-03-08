@@ -7,7 +7,7 @@
 
 .timeline-ul {
     position: relative;
-    padding-left: 45px;
+    padding-left: 35px;
     list-style: none
 }
 
@@ -31,7 +31,7 @@
 }
 
 .timeline-li.timeline-li-ko {
-    padding-bottom: 30px
+    padding-bottom: 20px
 }
 
 .timeline-li.timeline-li-ok {

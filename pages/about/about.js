@@ -1,6 +1,9 @@
 var switchButton = document.getElementById("switch");
 
-switchButton.onclick = function() {
+switchButton.onclick = function() 
+{
+    console.log("Switch");
+
 	var body = document.getElementsByTagName("body")[0];
 	
 	if (body.style.backgroundColor === "black") {

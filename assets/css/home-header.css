@@ -1,6 +1,7 @@
 /* home-header.css */
 
 .home-header {
+    text-align: center;
     align-items: center;
     justify-content: space-between;
     padding-top: 0;

@@ -80,7 +80,12 @@ export const configs =
 // Funciones
 export const utils =
 {
-    check_NaN: (_value, _def_val) => isNaN(_value) ? _def_val : _value,
+    toInt: (_value, _def_val) => 
+    {
+        let int = Number(_value);
+        if (int == null || isNaN(int)) return _def_val;
+        else return int;
+    },
     css_set: (_document, _variable, _value) => 
     {
         _document.documentElement.style.setProperty(_variable, `var(${_value})`);

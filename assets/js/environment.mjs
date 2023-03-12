@@ -132,8 +132,8 @@ export const utils =
 
     css_set: (_variable, _value) => 
     {
-        // document.documentElement.style.setProperty(_variable, `var(${_value})`);
-        document.documentElement.style.setProperty(_variable, `blue`);
+        document.documentElement.style.setProperty(_variable, `var(${_value})`);
+        // document.documentElement.style.setProperty(_variable, `blue`);
     },
 
     localStorage_get: (_key, _defaultValue)  =>
@@ -168,7 +168,6 @@ const update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorag
 // Awake()
 utils.onload( e => 
 {
-    console.log("---- AWAKE ----");
     update_pallette();
 
 });

@@ -26,10 +26,10 @@ function setPageMode(status)
 {
     if(status)
     {
-        localStorage.setItem(K_PAGE_MODE, 'Dark');
+        localStorage.setItem(K_PAGE_MODE, 'Light');
     }
     else
     {
-        localStorage.setItem(K_PAGE_MODE, 'Light');
+        localStorage.setItem(K_PAGE_MODE, 'Dark');
     }
 }

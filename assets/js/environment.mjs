@@ -28,14 +28,14 @@ export const environment =
         list:
         [
             [
-                [environment.css.var.color.primary, environment.css.var.color.light],
-                [environment.css.var.color.secondary, environment.css.var.color.black],
-                [environment.css.var.color.gray, environment.css.var.color.gray],
+                [environment.css.var.primary, environment.css.var.color.light],
+                [environment.css.var.secondary, environment.css.var.color.black],
+                [environment.css.var.tertiary, environment.css.var.color.gray],
             ],
             [
-                [environment.css.var.color.primary, environment.css.var.color.black],
-                [environment.css.var.color.secondary, environment.css.var.color.light],
-                [environment.css.var.color.gray, environment.css.var.color.gray],
+                [environment.css.var.primary, environment.css.var.color.black],
+                [environment.css.var.secondary, environment.css.var.color.light],
+                [environment.css.var.tertiary, environment.css.var.color.gray],
             ],
         ],
     },

@@ -1,4 +1,4 @@
-import { css, environment } from "../../assets/js/environment.mjs";
+import { environment } from "../../assets/js/environment.mjs";
 
 
 // Aquí va todo el código JS

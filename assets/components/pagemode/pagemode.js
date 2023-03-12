@@ -1,10 +1,10 @@
-import { css, environment } from "../../js/environment.mjs";
+import { utils, environment } from "../../js/environment.mjs";
 
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 
-const get_pagemode = () => Number(environment.localStorage.get(environment.localStorage.keys.pagemode,"0"));
-const set_pagemode = (val) => environment.localStorage.set(environment.localStorage.keys.pagemode, String(val));
-const refresh_pallette = () =>  environment.pallette.change(document, get_pagemode());
+const get_pagemode = () => Number(utils.localStorage_get(environment.localStorage.keys.pagemode,"0"));
+const set_pagemode = (val) => utils.localStorage_set(environment.localStorage.keys.pagemode, String(val));
+const refresh_pallette = () => utils.pallette_change(document, get_pagemode());
 
 
 document.addEventListener(environment.dom.keys.onLoaded, function(event) 

@@ -86,9 +86,9 @@ export const utils =
         if (int == null || isNaN(int)) return _def_val;
         else return int;
     },
-    css_set: (_document, _variable, _value) => 
+    css_set: (_variable, _value) => 
     {
-        _document.documentElement.style.setProperty(_variable, `var(${_value})`);
+        document.documentElement.style.setProperty(_variable, `var(${_value})`);
     },
 
     localStorage_get: (_key, _defaultValue)  =>
@@ -102,17 +102,13 @@ export const utils =
         localStorage.setItem(_value)
     },
     
-    pallette_change: (_doc, changeCounts) => 
+    pallette_change: (changeCounts) => 
     {
-        console.log("palletteer", {_doc, changeCounts});
-
-        let value = (changeCounts % configs.pallette.list.length) ?? 0;
-        let _pallette = configs.pallette.list[value];
-        console.log("change to this!", {value, _pallette, configs, changeCounts});
-
-        // for (let i = 0; i < _pallette.length; i++) 
-        // {
-        //     utils.localStorage_set(_doc,_pallette[0],_pallette[1]);
-        // }
+        let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
+        console.log("[pallette_change]", {_pallette, changeCounts});
+        for (let i = 0; i < _pallette.length; i++) 
+        {
+            utils.css_set(_pallette[0],_pallette[1]);
+        }
     },
 }

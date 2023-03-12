@@ -57,7 +57,7 @@ export const configs =
     {
         list:
         [
-            [
+            [ // ~ Dark Mode
                 [environment.css.var.primary, environment.css.var.color.light],
                 [environment.css.var.secondary, environment.css.var.color.black],
                 [environment.css.var.tertiary, environment.css.var.color.gray],
@@ -80,6 +80,8 @@ export const configs =
 // Funciones
 export const utils =
 {
+    id:(_id) => document.getElementById(_id),
+    // onload:(callback) => document.addEventListener(environment.dom.keys.onLoaded, callback),
     toInt: (_value, _def_val) => 
     {
         let int = Number(_value);

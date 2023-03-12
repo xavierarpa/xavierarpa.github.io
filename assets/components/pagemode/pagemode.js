@@ -1,4 +1,4 @@
-import { css, environment } from "../../js/environment";
+import { css, environment } from "../../js/environment.mjs";
 
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 // const K_DATA = 'data';

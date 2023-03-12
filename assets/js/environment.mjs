@@ -57,26 +57,42 @@ export const configs =
     {
         list:
         [
-            [ // ~ Dark Mode
-                [environment.css.var.primary, environment.css.var.color.light],
-                [environment.css.var.secondary, environment.css.var.color.black],
-                [environment.css.var.tertiary, environment.css.var.color.gray],
-            ],
-            [ // ~ Light Mode
-                [environment.css.var.primary, environment.css.var.color.black],
-                [environment.css.var.secondary, environment.css.var.color.light],
-                [environment.css.var.tertiary, environment.css.var.color.gray],
-            ],
-            [ // ~ Boogysoft Mode
-                [environment.css.var.primary, environment.css.var.color.light],
-                [environment.css.var.secondary, environment.css.var.color.red],
-                [environment.css.var.tertiary, environment.css.var.color.yellow],
-            ],
-            [ // ~ BeeGames Mode
-                [environment.css.var.primary, environment.css.var.color.yellow],
-                [environment.css.var.secondary, environment.css.var.color.black],
-                [environment.css.var.tertiary, environment.css.var.color.gray],
-            ],
+            {
+                name: "Dark",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                ],
+            },
+            {
+                name: "Light",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.black},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.light},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                ],
+            },
+            {
+                name: "Boogysoft",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.red},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.yellow},
+                ],
+            },
+            {
+                name: "Beegames",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.yellow},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                ],
+            },
         ],
     },
 }
@@ -125,7 +141,7 @@ export const utils =
     pallette_change: (changeCounts) => 
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
-        console.log("[pallette_change]", {_pallette, changeCounts});
-        for (let i = 0; i < _pallette.length; i++)  utils.css_set(_pallette[0],_pallette[1]);
+        console.log("PALLETTE", {_pallette, changeCounts});
+        for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
     },
 }

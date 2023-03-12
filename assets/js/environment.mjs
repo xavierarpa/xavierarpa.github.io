@@ -169,7 +169,6 @@ const update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorag
 utils.onload( e => 
 {
     update_pallette();
-
 });
 //
 // Tick Refresh Pallette

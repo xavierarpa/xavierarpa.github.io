@@ -93,11 +93,32 @@ export const configs =
                     {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
                 ],
             },
+            {
+                name: "Experimental",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.blue},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.yellow},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.red},
+                ],
+            },
+            {
+                name: "Hacker",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.color.green},
+                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.color.black},
+                ],
+            },
         ],
     },
 }
 
 
+// pink
+// skyblue
+// white
 
 // const _data = new URLSearchParams(window.location.search).get(K_DATA);
 // console.log(_data);
@@ -133,7 +154,6 @@ export const utils =
     css_set: (_variable, _value) => 
     {
         document.documentElement.style.setProperty(_variable, `var(${_value})`);
-        // document.documentElement.style.setProperty(_variable, `blue`);
     },
 
     localStorage_get: (_key, _defaultValue)  =>
@@ -169,7 +189,7 @@ utils.onload( e =>
 });
 //
 // Tick Refresh Pallette
-setTimeout(()=>{
+setInterval(()=>{
     console.log("Refresh...");
     update_pallette();
 }, 1000);

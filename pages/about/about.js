@@ -1,4 +1,4 @@
-import { css, environment } from "../../assets/js/environment.js";
+const { css, environment } = require("../../assets/js/environment.js");
 
 
 // Aquí va todo el código JS

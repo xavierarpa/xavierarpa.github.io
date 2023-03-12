@@ -20,7 +20,7 @@ export const environment =
     {
         keys:
         {
-            pagemode: "pagemode"
+            pagemode: "pageModeCount"
         }
     },
     css:

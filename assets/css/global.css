@@ -9,24 +9,29 @@
     --color-gray-dark:          #696969; /* Gris oscuro */
     --color-gray-very-dark:     #333333; /* Gris muy oscuro */
     --color-black:              #000000; /* Negro puro */
-    --color-red:                #ff627c; /* Rojo */
-    --color-green:              #82ffad; /* Verde */
-    --color-blue:               #4f9bff; /* Azul */
-    --color-yellow:             #ffda62; /* Amarillo */
+    --color-red:                #ff0000; /* Rojo */
+    --color-green:              #00ff00; /* Verde */
+    --color-blue:               #0000ff; /* Azul */
+    --color-yellow:             #FFFF00; /* Amarillo */
     
     /* Style */
-    --primary: var(--color-light);
-    --secondary: var(--color-black);
-    --tertiary: var(--color-gray);
+    --primary: var(--color-light); /* Text, Borders */
+    --secondary: var(--color-black); /* Backgrounds */
+    --tertiary: var(--color-gray); /* Others */
+    /* --danger: var(--color-red); Bad */
 
 
     /* Others */
-    --image-border-radius: 2px;
+    /* --image-border-radius: 2px;
     --marker-roundness: 10px;
     --scrollbar-color: rgba(0, 0, 0, 0.15);
     --link-hover-color: rgb(0, 0, 0);
     --content-size: 800px;
-    --highlighter-roundness: 10px;
+    --highlighter-roundness: 10px; */
+
+
+    /* //TODO TEST */
+    /* --blockquote-test: #494949; */
 }
 
 body 

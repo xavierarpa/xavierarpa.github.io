@@ -3,7 +3,7 @@
     padding-bottom: 50px;
     display: grid;
     grid-template-areas: "left content right""left footer right";
-    background: linear-gradient(to left, var(--base-color), var(--base-color));
+    background: linear-gradient(to left, var(--primary), var(--secondary));
     background-blend-mode: multiply, normal, normal, normal
 }
 @media (min-width:350px) {

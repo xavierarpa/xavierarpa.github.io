@@ -108,12 +108,12 @@ export const utils =
 {
     id:(_id) => 
     {
-        document.getElementById(_id);
+        return document.getElementById(_id);
     },
 
     onload:(callback) => 
     {
-        document.addEventListener(environment.dom.keys.onLoaded, callback);
+        return document.addEventListener(environment.dom.keys.onLoaded, callback);
     },
 
     toInt: (_value, _def_val) => 
@@ -132,7 +132,6 @@ export const utils =
 
     css_set: (_variable, _value) => 
     {
-        console.log(`SET "${_variable}"  => "var(${_value})" `);
         // document.documentElement.style.setProperty(_variable, `var(${_value})`);
         document.documentElement.style.setProperty(_variable, `blue`);
     },
@@ -152,7 +151,6 @@ export const utils =
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
-        console.log("SET PALLETTE", {_pallette, changeCounts});
     },
 }
 

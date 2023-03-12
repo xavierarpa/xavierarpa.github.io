@@ -23,22 +23,6 @@ export const environment =
             pagemode: "pagemode"
         }
     },
-    pallette:
-    {
-        list:
-        [
-            [
-                [environment.css.var.primary, environment.css.var.color.light],
-                [environment.css.var.secondary, environment.css.var.color.black],
-                [environment.css.var.tertiary, environment.css.var.color.gray],
-            ],
-            [
-                [environment.css.var.primary, environment.css.var.color.black],
-                [environment.css.var.secondary, environment.css.var.color.light],
-                [environment.css.var.tertiary, environment.css.var.color.gray],
-            ],
-        ],
-    },
     css:
     {
         var:
@@ -65,6 +49,28 @@ export const environment =
     }
 };
 
+export const configs =
+{
+    pallette:
+    {
+        list:
+        [
+            [
+                [environment.css.var.primary, environment.css.var.color.light],
+                [environment.css.var.secondary, environment.css.var.color.black],
+                [environment.css.var.tertiary, environment.css.var.color.gray],
+            ],
+            [
+                [environment.css.var.primary, environment.css.var.color.black],
+                [environment.css.var.secondary, environment.css.var.color.light],
+                [environment.css.var.tertiary, environment.css.var.color.gray],
+            ],
+        ],
+    },
+}
+
+
+
 // const _data = new URLSearchParams(window.location.search).get(K_DATA);
 // console.log(_data);
 
@@ -89,7 +95,8 @@ export const utils =
     
     pallette_change: (_doc, changeCounts) => 
     {
-        let _pallette = environment.pallette.list[changeCounts % environment.pallette.list.length];
+        
+        let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
         console.log("change to this!", {_pallette});
         for (let i = 0; i < _pallette.length; i++) utils.localStorage_set(_doc,_pallette[0],_pallette[1]);
     },

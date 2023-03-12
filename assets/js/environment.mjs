@@ -124,6 +124,7 @@ export const utils =
 
     css_set: (_variable, _value) => 
     {
+        console.log(`SET "${_variable}"  => "var(${_value})" `);
         document.documentElement.style.setProperty(_variable, `var(${_value})`);
     },
 

@@ -19,19 +19,6 @@
     --secondary: var(--color-black); /* Backgrounds */
     --tertiary: var(--color-gray); /* Others */
     /* --danger: var(--color-red); Bad */
-
-
-    /* Others */
-    /* --image-border-radius: 2px;
-    --marker-roundness: 10px;
-    --scrollbar-color: rgba(0, 0, 0, 0.15);
-    --link-hover-color: rgb(0, 0, 0);
-    --content-size: 800px;
-    --highlighter-roundness: 10px; */
-
-
-    /* //TODO TEST */
-    /* --blockquote-test: #494949; */
 }
 
 body 

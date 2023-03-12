@@ -106,8 +106,16 @@ export const configs =
 // Funciones
 export const utils =
 {
-    id:(_id) => document.getElementById(_id),
-    // onload:(callback) => document.addEventListener(environment.dom.keys.onLoaded, callback),
+    id:(_id) => 
+    {
+        document.getElementById(_id);
+    },
+
+    onload:(callback) => 
+    {
+        document.addEventListener(environment.dom.keys.onLoaded, callback);
+    },
+
     toInt: (_value, _def_val) => 
     {
         let int = Number(_value);
@@ -143,7 +151,29 @@ export const utils =
     pallette_change: (changeCounts) => 
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
-        console.log("PALLETTE", {_pallette, changeCounts});
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
+        console.log("SET PALLETTE", {_pallette, changeCounts});
     },
 }
+
+
+// FUNCTIONS
+//
+// Updates pallette
+const update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
+
+
+
+
+// BEHAVIOURS
+//
+// Awake()
+utils.onload( e => 
+{
+    console.log("---- AWAKE ----");
+    update_pallette();
+
+});
+//
+// Tick Refresh Pallette
+setTimeout(update_pallette, 1000);

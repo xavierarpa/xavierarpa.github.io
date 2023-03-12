@@ -20,7 +20,7 @@ export const environment =
     {
         keys:
         {
-            onPalletteChange: "onRefresh",
+            onPalletteChange: "onPalletteChange",
             pagemode: "pageModeCount"
         }
     },
@@ -192,9 +192,12 @@ export const utils =
         }
     },
 
-    localStorage_event: (_key, callback)  => 
+    localStorage_event: (_key, _callback)  => 
     {
-        if(localStorage_isEvent(_key)) callback();
+        if(utils.localStorage_isEvent(_key)) 
+        {
+            _callback();
+        }
     },
 
     localStorage_eventInvoke: (_key) =>

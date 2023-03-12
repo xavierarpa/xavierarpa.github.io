@@ -1,46 +1,11 @@
+@import url("/assets/css/global.css");
 @import url("/assets/css/timeline.css");
 @import url("/assets/css/blockquote.css");
 @import url("/assets/css/fade-in.css");
 @import url("/assets/css/column-page.css");
 @import url("/assets/css/column-page-content.css");
 @import url("/assets/css/home-header.css");
-
-
-:root {
-    --image-border-radius: 2px;
-    --base-color: #fdfdfd;
-    --accent-color: #ffd8b5;
-    --scrollbar-color: rgba(0, 0, 0, 0.15);
-    --content-size: 800px;
-    --link-hover-color: rgb(0, 0, 0);
-    --highlighter-roundness: 10px;
-    --marker-roundness: 10px;
-    --green: 130, 255, 173;
-    --orange: 255, 218, 98;
-    --blue: 79, 155, 255;
-    --red: 255, 98, 124;
-    --yellow: 255, 234, 71;
-    --gray: rgba(60, 60, 60, 0.7)
-}
-
-body 
-{
-    /* background-color: black;
-	color: white; */
-	/* font-family: Arial, sans-serif; */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-}
-
-body,
-html {
-    background-color: var(--base-color);
-    scroll-behavior: smooth;
-    border: none;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
+/* 
 ::selection {
     background-color: #e0e0e0
 }
@@ -79,4 +44,4 @@ li {
     border: none; 
     width: 30px; 
     height: 30px;
-}
+} */

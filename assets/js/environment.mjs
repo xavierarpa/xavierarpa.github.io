@@ -86,7 +86,7 @@ export const utils =
         if (int == null || isNaN(int)) return _def_val;
         else return int;
     },
-    
+
     css_set: (_variable, _value) => 
     {
         document.documentElement.style.setProperty(_variable, `var(${_value})`);
@@ -94,13 +94,13 @@ export const utils =
 
     localStorage_get: (_key, _defaultValue)  =>
     {
-        if(localStorage.getItem(_key) == null)  localStorage.setItem(_key, _defaultValue);
+        if(localStorage.getItem(_key) == null)  utils.localStorage_set(_key, _defaultValue);
         return localStorage.getItem(_key);
     },
 
     localStorage_set: (_key, _value) =>
     {
-        localStorage.setItem(_value)
+        localStorage.setItem(_key, _value);
     },
     
     pallette_change: (changeCounts) => 

@@ -20,12 +20,11 @@
     --tertiary: var(--color-gray);
 
 
+    /* Others */
     --image-border-radius: 2px;
     --marker-roundness: 10px;
-
     --scrollbar-color: rgba(0, 0, 0, 0.15);
     --link-hover-color: rgb(0, 0, 0);
-
     --content-size: 800px;
     --highlighter-roundness: 10px;
 }
@@ -55,10 +54,3 @@ body, html
 {
     overflow-x: scroll;
 }
-
-/* 
-.error {
-    color: red;
-    font-weight: 600;
-    font-size: 14px;
-  } */

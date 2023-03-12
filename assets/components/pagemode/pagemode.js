@@ -1,7 +1,10 @@
-import { css, environment } from "../../js/environment.mjs";
+const { css, environment } = require("../../js/environment.js");
 
 const ID_BUTTON_SWITCH = 'switch_pageMode';
-// const K_DATA = 'data';
+
+const get_pagemode = () => Number(environment.localStorage.get(environment.localStorage.keys.pagemode,"0"));
+const set_pagemode = (val) => environment.localStorage.set(environment.localStorage.keys.pagemode, String(val));
+const refresh_pallette = () =>  environment.pallette.change(document, get_pagemode());
 
 
 document.addEventListener(environment.dom.keys.onLoaded, function(event) 
@@ -15,6 +18,3 @@ document.addEventListener(environment.dom.keys.onLoaded, function(event)
     }
 });
 
-const get_pagemode = () => Number(environment.localStorage.get(environment.localStorage.keys.pagemode,"0"));
-const set_pagemode = (val) => environment.localStorage.set(environment.localStorage.keys.pagemode, String(val)) ;
-const refresh_pallette = () =>  environment.pallette.change(document, get_pagemode());

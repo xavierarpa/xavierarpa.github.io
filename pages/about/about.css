@@ -70,3 +70,13 @@ li {
     letter-spacing: .02em;
     line-height: 1.6em
 }
+
+#pagemode
+{
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    border: none; 
+    width: 30px; 
+    height: 30px;
+}

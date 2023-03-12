@@ -1,3 +1,5 @@
+const K_DATA = 'data';
+const ID_BUTTON_SWITCH = 'switch_pageMode';
 const K_PAGE_MODE = 'pagemode';
 const K_PAGE_MODE_TYPE_DARK = 'Dark';
 const K_PAGE_MODE_TYPE_LIGHT = 'Light';
@@ -9,8 +11,11 @@ if (localStorage.getItem(K_PAGE_MODE) == null)  localStorage.setItem(K_PAGE_MODE
 // on DOM is loaded
 document.addEventListener("DOMContentLoaded", function(event) 
 {
-    var switchButton = document.getElementById("switch_pageMode");
-    switchButton.onclick = () => setPageMode(localStorage.getItem(K_PAGE_MODE) == K_PAGE_MODE_TYPE_DARK);
+    document.getElementById(ID_BUTTON_SWITCH).onclick = () => setPageMode(localStorage.getItem(K_PAGE_MODE) == K_PAGE_MODE_TYPE_DARK);
+
+    const _data = new URLSearchParams(window.location.search).get(K_DATA);
+    console.log(_data);
+
 });
 
 // func to switch "page mode"

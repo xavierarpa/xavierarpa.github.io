@@ -159,10 +159,7 @@ export const utils =
 //
 // Updates pallette
 const update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
-
-
-
-
+//
 // BEHAVIOURS
 //
 // Awake()

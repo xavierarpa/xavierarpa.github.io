@@ -86,6 +86,7 @@ export const utils =
         if (int == null || isNaN(int)) return _def_val;
         else return int;
     },
+    
     css_set: (_variable, _value) => 
     {
         document.documentElement.style.setProperty(_variable, `var(${_value})`);

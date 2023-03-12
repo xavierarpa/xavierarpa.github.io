@@ -1,4 +1,4 @@
-// Data
+// Datos estaticos
 export const environment = 
 {
     contact: 
@@ -49,6 +49,8 @@ export const environment =
     }
 };
 
+
+// Estructuras que son armadas de literales...
 export const configs =
 {
     pallette:
@@ -74,7 +76,8 @@ export const configs =
 // const _data = new URLSearchParams(window.location.search).get(K_DATA);
 // console.log(_data);
 
-// UTILS
+
+// Funciones
 export const utils =
 {
     css_set: (_document, _variable, _value) => 

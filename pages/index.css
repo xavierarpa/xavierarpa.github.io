@@ -15,9 +15,9 @@
     --color-yellow:             #ffda62; /* Amarillo */
     
     /* Style */
-    --style-color-primary: var(--color-black);
-    --style-color-secondary: var(--color-black);
-    --style-color-tertiary: var(--color-black);
+    --primary: var(--color-light);
+    --secondary: var(--color-black);
+    --tertiary: var(--color-gray);
 
 
     --image-border-radius: 2px;
@@ -37,10 +37,12 @@ body
 
 body, html 
 {
-    background-color: var(--background-color);
+    color: var(--primary);
+    background-color: var(--secondary);
+    height: 100%;
+    
     scroll-behavior: smooth;
     border: none;
-    height: 100%;
     margin: 0;
     padding: 0;
 }

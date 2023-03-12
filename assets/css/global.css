@@ -1,18 +1,33 @@
-:root {
+/* Variables */
+:root { 
+    /* COLOR */
+    --color-light:              #FFFFFF; /* Blanco puro */
+    --color-gray-light:         #F5F5F5; /* Gris muy claro */
+    --color-gray-medium-light:  #DCDCDC; /* Gris claro */
+    --color-gray-medium:        #A9A9A9; /* Gris medio */
+    --color-gray:               #808080; /* Gris */
+    --color-gray-dark:          #696969; /* Gris oscuro */
+    --color-gray-very-dark:     #333333; /* Gris muy oscuro */
+    --color-black:              #000000; /* Negro puro */
+    --color-red:                #ff627c; /* Rojo */
+    --color-green:              #82ffad; /* Verde */
+    --color-blue:               #4f9bff; /* Azul */
+    --color-yellow:             #ffda62; /* Amarillo */
+    
+    /* Style */
+    --style-color-primary: var(--color-black);
+    --style-color-secondary: var(--color-black);
+    --style-color-tertiary: var(--color-black);
+
+
     --image-border-radius: 2px;
-    --base-color: #fdfdfd;
-    --accent-color: #ffd8b5;
-    --scrollbar-color: rgba(0, 0, 0, 0.15);
-    --content-size: 800px;
-    --link-hover-color: rgb(0, 0, 0);
-    --highlighter-roundness: 10px;
     --marker-roundness: 10px;
-    --green: 130, 255, 173;
-    --orange: 255, 218, 98;
-    --blue: 79, 155, 255;
-    --red: 255, 98, 124;
-    --yellow: 255, 234, 71;
-    --gray: rgba(60, 60, 60, 0.7)
+
+    --scrollbar-color: rgba(0, 0, 0, 0.15);
+    --link-hover-color: rgb(0, 0, 0);
+
+    --content-size: 800px;
+    --highlighter-roundness: 10px;
 }
 
 body 
@@ -22,10 +37,27 @@ body
 
 body, html 
 {
-    background-color: var(--base-color);
+    background-color: var(--background-color);
     scroll-behavior: smooth;
     border: none;
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+.scroll-y
+{
+    overflow-y: scroll;
+}
+
+.scroll-x
+{
+overflow-x: scroll;
+}
+
+/* 
+.error {
+    color: red;
+    font-weight: 600;
+    font-size: 14px;
+  } */

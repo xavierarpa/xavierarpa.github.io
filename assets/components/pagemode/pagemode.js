@@ -12,8 +12,8 @@ const refresh_pallette = () => utils.pallette_change(get_pagemode());
 // })
 document.addEventListener(environment.dom.keys.onLoaded, function(event)
 {
-    refresh_pallette(); //Cargamos la paleta actual
-
+    refresh_pallette(); //Cargamos la paleta actual.
+    //
     utils.id(ID_BUTTON_SWITCH).onclick = () =>
     {
         let val = get_pagemode()+1;

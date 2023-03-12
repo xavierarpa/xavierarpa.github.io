@@ -9,12 +9,12 @@ const refresh_pallette = () => utils.pallette_change(document, get_pagemode());
 
 document.addEventListener(environment.dom.keys.onLoaded, function(event) 
 {
-    console.log("NEW WORLD");
     refresh_pallette(); //Cargamos la paleta actual
     document.getElementById(ID_BUTTON_SWITCH).onclick = () =>  
     {
-        console.log("SWITCH");
-        set_pagemode(get_pagemode()+1); // Avanzamos la paleta si presiona el botón.
+        let val = get_pagemode()+1;
+        console.log("SWITCH", {val});
+        set_pagemode(val); // Avanzamos la paleta si presiona el botón.
     }
 });
 

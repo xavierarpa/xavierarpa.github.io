@@ -172,4 +172,7 @@ utils.onload( e =>
 });
 //
 // Tick Refresh Pallette
-setTimeout(update_pallette, 1000);
+setTimeout(()=>{
+    console.log("Refresh...");
+    update_pallette();
+}, 1000);

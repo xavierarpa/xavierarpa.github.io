@@ -14,7 +14,7 @@ document.addEventListener(environment.dom.keys.onLoaded, function(event)
     document.getElementById(ID_BUTTON_SWITCH).onclick = () =>  
     {
         console.log("SWITCH");
-        set_pagemode(get_pagemode()+1); // Avanzamos la paleta si presiona el botón
+        set_pagemode(get_pagemode()+1); // Avanzamos la paleta si presiona el botón.
     }
 });
 

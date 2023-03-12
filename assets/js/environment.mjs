@@ -20,6 +20,7 @@ export const environment =
     {
         keys:
         {
+            onPalletteChange: "onRefresh",
             pagemode: "pageModeCount"
         }
     },
@@ -156,6 +157,11 @@ export const utils =
         document.documentElement.style.setProperty(_variable, `var(${_value})`);
     },
 
+    localStorage_delete: (_key)  =>
+    {
+        localStorage.removeItem(_key);
+    },
+
     localStorage_get: (_key, _defaultValue)  =>
     {
         if(localStorage.getItem(_key) == null)  utils.localStorage_set(_key, _defaultValue);
@@ -166,27 +172,73 @@ export const utils =
     {
         localStorage.setItem(_key, utils.toString(_value, ""));
     },
+
+    localStorage_isNull: (_key)  =>
+    {
+        return localStorage.getItem(_key) == null;
+    },
+
+    localStorage_isEvent: (_key)  => //Acts as a events, but it requires to be asked to work
+    {
+        if(utils.localStorage_isNull(_key))
+        {
+            return false;
+        }
+        else
+        {
+            console.log(`Event Message for "${_key}": "${utils.localStorage_get(_key)}"`);
+            utils.localStorage_delete(_key);
+            return true;
+        }
+    },
+
+    localStorage_event: (_key, callback)  => 
+    {
+        if(localStorage_isEvent(_key)) callback();
+    },
+
+    localStorage_eventInvoke: (_key) =>
+    {
+        utils.localStorage_set(_key, "event");
+    },
     
     pallette_change: (changeCounts) => 
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
     },
+    
+
+
+    // EVENTS
+    event_onPalletteChange: () => utils.localStorage_eventInvoke(environment.localStorage.keys.onPalletteChange), // ~ Invoke onPalletteChange !
 }
 
 
 // FUNCTIONS
 //
 // Updates pallette
-const update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
-//
+const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
+
+
+// Awake()
+const behaviour_awake = () =>
+{
+
+};
+const behaviour_update = () =>
+{
+    behaviour_check_events();
+};
+const behaviour_check_events = () =>
+{
+    utils.localStorage_event(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
+};
+
+
+
+
 // BEHAVIOURS
 //
-// Awake()
-utils.onload( e => 
-{
-    update_pallette();
-});
-//
-// Tick Refresh Pallette
-setInterval(update_pallette, 100);
+utils.onload( e => behaviour_awake ); // AWAKE => When loaded is all loaded
+setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms

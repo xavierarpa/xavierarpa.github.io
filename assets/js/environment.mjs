@@ -98,8 +98,11 @@ export const utils =
     
     pallette_change: (_doc, changeCounts) => 
     {
-        let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
-        console.log("change to this!", {_pallette});
+        console.log("palletteer", {_doc, changeCounts});
+
+        let value = (changeCounts % configs.pallette.list.length) ?? 0;
+        let _pallette = configs.pallette.list[value];
+        console.log("change to this!", {value, _pallette, configs, changeCounts});
         // for (let i = 0; i < _pallette.length; i++) 
         // {
         //     utils.localStorage_set(_doc,_pallette[0],_pallette[1]);

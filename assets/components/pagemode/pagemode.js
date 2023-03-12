@@ -1,4 +1,4 @@
-const { css, environment } = require("../../js/environment.js");
+import { css, environment } from "../../js/environment.mjs";
 
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 

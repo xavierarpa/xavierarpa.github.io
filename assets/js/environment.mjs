@@ -62,9 +62,19 @@ export const configs =
                 [environment.css.var.secondary, environment.css.var.color.black],
                 [environment.css.var.tertiary, environment.css.var.color.gray],
             ],
-            [
+            [ // ~ Light Mode
                 [environment.css.var.primary, environment.css.var.color.black],
                 [environment.css.var.secondary, environment.css.var.color.light],
+                [environment.css.var.tertiary, environment.css.var.color.gray],
+            ],
+            [ // ~ Boogysoft Mode
+                [environment.css.var.primary, environment.css.var.color.light],
+                [environment.css.var.secondary, environment.css.var.color.red],
+                [environment.css.var.tertiary, environment.css.var.color.yellow],
+            ],
+            [ // ~ BeeGames Mode
+                [environment.css.var.primary, environment.css.var.color.yellow],
+                [environment.css.var.secondary, environment.css.var.color.black],
                 [environment.css.var.tertiary, environment.css.var.color.gray],
             ],
         ],
@@ -89,6 +99,13 @@ export const utils =
         else return int;
     },
 
+    toString: (_value, _def_val) => 
+    {
+        let string = String(_value);
+        if (string == null) return _def_val;
+        else return string;
+    },
+
     css_set: (_variable, _value) => 
     {
         document.documentElement.style.setProperty(_variable, `var(${_value})`);
@@ -102,16 +119,13 @@ export const utils =
 
     localStorage_set: (_key, _value) =>
     {
-        localStorage.setItem(_key, _value);
+        localStorage.setItem(_key, utils.toString(_value, ""));
     },
     
     pallette_change: (changeCounts) => 
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
         console.log("[pallette_change]", {_pallette, changeCounts});
-        for (let i = 0; i < _pallette.length; i++) 
-        {
-            utils.css_set(_pallette[0],_pallette[1]);
-        }
+        for (let i = 0; i < _pallette.length; i++)  utils.css_set(_pallette[0],_pallette[1]);
     },
 }

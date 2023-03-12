@@ -189,7 +189,4 @@ utils.onload( e =>
 });
 //
 // Tick Refresh Pallette
-setInterval(()=>{
-    console.log("Refresh...");
-    update_pallette();
-}, 1000);
+setInterval(update_pallette, 100);

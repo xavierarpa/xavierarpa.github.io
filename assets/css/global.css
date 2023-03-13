@@ -24,6 +24,7 @@
     --tertiary: var(--color-gray); /* Alternative Text */
     --quartery: var(--color-light); /* Alternative Backgrounds */
 
+    transition: background-color 0.5s ease;
 }
 
 body 

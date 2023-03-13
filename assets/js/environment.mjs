@@ -141,7 +141,7 @@ export const utils =
 
     subscribe:(_callback) => 
     {
-        console.log("SUB", {_callback});
+        console.log("SUB PAR", {_callback});
         return window.parent.addEventListener(environment.dom.keys.message, _callback);
     },
     

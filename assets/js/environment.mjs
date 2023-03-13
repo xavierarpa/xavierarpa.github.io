@@ -13,7 +13,8 @@ export const environment =
     {
         keys:
         {
-            onLoaded: "DOMContentLoaded"
+            onLoaded: "DOMContentLoaded",
+            message: "message"
         }
     },
     localStorage:
@@ -138,6 +139,16 @@ export const utils =
         return document.addEventListener(environment.dom.keys.onLoaded, callback);
     },
 
+    subscribe:(_callback) => 
+    {
+        return document.addEventListener(environment.dom.keys.message, _callback);
+    },
+    
+    invoke:(_key, _data = null) => 
+    {
+        return window.parent.postMessage({key:_key, data:_data}, "*");
+    },
+
     toInt: (_value, _def_val) => 
     {
         let int = Number(_value);
@@ -178,50 +189,15 @@ export const utils =
         return localStorage.getItem(_key) == null;
     },
 
-    localStorage_isEvent: (_key)  =>
-    {
-        if(utils.localStorage_isNull(_key))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    },
-
-    localStorage_event: (_key, _callback)  => 
-    {
-        if(utils.localStorage_isEvent(_key)) 
-        {
-            _callback();
-        }
-    },
-    localStorage_eventDispatch: (_key, _callback)  => 
-    {
-        if(utils.localStorage_isEvent(_key)) 
-        {
-            console.log(`Event Message for "${_key}": "${utils.localStorage_get(_key)}"`);
-            utils.localStorage_delete(_key);
-            _callback();
-        }
-    },
-
-    localStorage_eventInvoke: (_key) =>
-    {
-        utils.localStorage_set(_key, "event");
-    },
     
     pallette_change: (changeCounts) => 
     {
         let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
     },
-    
-
 
     // EVENTS
-    event_onPalletteChange: () => utils.localStorage_eventInvoke(environment.localStorage.keys.onPalletteChange), // ~ Invoke onPalletteChange !
+    event_onPalletteChange: () =>  utils.invoke(environment.localStorage.keys.onPalletteChange),
 }
 
 
@@ -231,32 +207,32 @@ export const utils =
 const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
 
 
+// EVENTS
+const events = 
+{
+    [environment.localStorage.keys.onPalletteChange]: (data=null) => func_update_pallette(),
+};
+
+
 // Awake()
 const behaviour_awake = () =>
 {
-
+    window.parent.postMessage()
 };
+// Update()
 const behaviour_update = () =>
 {
-    behaviour_enter_events();
+    
 };
-const behaviour_lateUpdate = () =>
+// Message()
+const behaviour_message = (message) =>
 {
-    behaviour_exit_events();
+    console.log("MESSAGE !", {message});
+    events[message.key](message.data);
 };
-const behaviour_enter_events = () =>
-{
-    utils.localStorage_event(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
-};
-const behaviour_exit_events = () =>
-{
-    utils.localStorage_eventDispatch(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
-};
-
-
 
 // BEHAVIOURS
 //
 utils.onload( e => behaviour_awake ); // AWAKE => When loaded is all loaded
 setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
-setInterval(behaviour_lateUpdate, 20); // UPDATE => 50 FPS => 20ms
+utils.subscribe(behaviour_message); // Each Message event invoked

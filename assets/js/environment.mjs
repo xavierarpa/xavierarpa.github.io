@@ -29,7 +29,7 @@ export const environment =
     {
         var:
         {
-            color:
+            colors:
             {
                 light: "--color-light",
                 gray_light: "--color-gray-light",
@@ -44,6 +44,11 @@ export const environment =
                 blue: "--color-blue",
                 yellow: "--color-yellow",
             },
+            fonts:
+            {
+                apple_system: "--font-apple-system",
+            },
+            font: "--font",
             primary: "--primary",
             secondary: "--secondary",
             tertiary: "--tertiary",
@@ -64,60 +69,60 @@ export const configs =
                 name: "Dark",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.light},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray},
                 ],
             },
             {
                 name: "Light",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.black},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.light},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray},
                 ],
             },
             {
                 name: "Boogysoft",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.light},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.red},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.yellow},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.yellow},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.red},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.yellow},
                 ],
             },
             {
                 name: "Beegames",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.yellow},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray},
                 ],
             },
             {
                 name: "Experimental",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.blue},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.yellow},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.red},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.red},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.blue},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.red},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.red},
                 ],
             },
             {
                 name: "Hacker",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.color.green},
-                    {k:environment.css.var.secondary, v: environment.css.var.color.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.color.black},
-                    {k:environment.css.var.quartery, v: environment.css.var.color.black},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.green},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
         ],

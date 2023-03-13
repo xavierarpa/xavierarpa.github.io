@@ -13,17 +13,22 @@
     --color-green:              #00ff00; /* Verde */
     --color-blue:               #0000ff; /* Azul */
     --color-yellow:             #FFFF00; /* Amarillo */
+
+    /* FONT */
+    --font-apple-system:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     
     /* Style */
+    --font: var(--font-apple-system); /* Font */
     --primary: var(--color-light); /* Principal Text */
     --secondary: var(--color-black); /* Principal Backgrounds */
-    --tertiary: var(--color-gray); /* Secondary Text */
-    --quartery: var(--color-light); /* Secondary Backgrounds */
+    --tertiary: var(--color-gray); /* Alternative Text */
+    --quartery: var(--color-light); /* Alternative Backgrounds */
+
 }
 
 body 
 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: var(--font-apple-system);
 }
 
 body, html 

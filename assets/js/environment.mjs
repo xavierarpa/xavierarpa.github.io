@@ -142,7 +142,7 @@ export const utils =
     subscribe:(_callback) => 
     {
         console.log("SUB", {_callback});
-        return document.addEventListener(environment.dom.keys.message, _callback);
+        return window.addEventListener(environment.dom.keys.message, _callback);
     },
     
     invoke:(_key, _data = null) => 

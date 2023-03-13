@@ -47,6 +47,7 @@ export const environment =
             primary: "--primary",
             secondary: "--secondary",
             tertiary: "--tertiary",
+            quartery: "--quartery",
         },
     }
 };
@@ -66,6 +67,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.light},
                     {k:environment.css.var.secondary, v: environment.css.var.color.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
                 ],
             },
             {
@@ -75,6 +77,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.black},
                     {k:environment.css.var.secondary, v: environment.css.var.color.light},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
                 ],
             },
             {
@@ -84,6 +87,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.light},
                     {k:environment.css.var.secondary, v: environment.css.var.color.red},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.yellow},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.yellow},
                 ],
             },
             {
@@ -93,6 +97,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.yellow},
                     {k:environment.css.var.secondary, v: environment.css.var.color.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.gray},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.gray},
                 ],
             },
             {
@@ -102,6 +107,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.blue},
                     {k:environment.css.var.secondary, v: environment.css.var.color.yellow},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.red},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.red},
                 ],
             },
             {
@@ -111,6 +117,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.color.green},
                     {k:environment.css.var.secondary, v: environment.css.var.color.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.color.black},
+                    {k:environment.css.var.quartery, v: environment.css.var.color.black},
                 ],
             },
         ],
@@ -141,14 +148,12 @@ export const utils =
 
     subscribe:(_callback) => 
     {
-        console.log("S XD", {_callback});
         return window.parent.addEventListener(environment.dom.keys.message, __msg => _callback(__msg.data));
     },
     
     invoke:(_key, _data = null) => 
     {
         let _message = {key:_key, data:_data};
-        console.log("INVOKE", {_message});
         return window.parent.postMessage(_message, "*");
     },
 

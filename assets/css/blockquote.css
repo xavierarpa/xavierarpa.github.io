@@ -1,7 +1,7 @@
 blockquote {
     box-sizing: border-box;
     font-style: italic;
-    color: #494949;
+    color: var(--primary);
     background-color: var(--tertiary);
     border-color: var(--primary);
     border-radius: 4px;

@@ -15,10 +15,10 @@
     --color-yellow:             #FFFF00; /* Amarillo */
     
     /* Style */
-    --primary: var(--color-light); /* Text, Borders */
-    --secondary: var(--color-black); /* Backgrounds */
-    --tertiary: var(--color-gray); /* Others */
-    /* --danger: var(--color-red); Bad */
+    --primary: var(--color-light); /* Principal Text */
+    --secondary: var(--color-black); /* Principal Backgrounds */
+    --tertiary: var(--color-gray); /* Secondary Text */
+    --quartery: var(--color-light); /* Secondary Backgrounds */
 }
 
 body 

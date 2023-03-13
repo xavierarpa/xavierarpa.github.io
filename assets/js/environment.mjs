@@ -226,15 +226,11 @@ const behaviour_awake = () => // AWAKE
 const behaviour_update = () => // UPDATE
 {
 };
-const behaviour_message = (message) => // MESSAGE
-{
-    console.log("MESSAGE !", {message});
-    events[message.key](message.data);
-};
+const behaviour_message = (message) => events[message.key](message.data); // MESSAGE
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
 //------------ BEHAVIOURS ------------------------------------------------------------------------
-utils.onload( e => behaviour_awake ); // AWAKE => When loaded is all loaded
+utils.onload( e => behaviour_awake() ); // AWAKE => When loaded is all loaded
 setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
 utils.subscribe(behaviour_message); // Each Message event invoked

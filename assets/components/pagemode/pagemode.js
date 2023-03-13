@@ -13,5 +13,4 @@ utils.onload( event =>
         set_pagemode(get_pagemode()+1); // Avanzamos la paleta si presiona el botón.
         utils.event_onPalletteChange();
     }
-
 });

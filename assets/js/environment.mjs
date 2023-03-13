@@ -242,7 +242,7 @@ const behaviour_update = () =>
 };
 const behaviour_lateUpdate = () =>
 {
-    
+    behaviour_exit_events();
 };
 const behaviour_enter_events = () =>
 {
@@ -252,7 +252,6 @@ const behaviour_exit_events = () =>
 {
     utils.localStorage_eventDispatch(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
 };
-
 
 
 

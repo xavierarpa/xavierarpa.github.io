@@ -141,12 +141,15 @@ export const utils =
 
     subscribe:(_callback) => 
     {
+        console.log("SUB", {_callback});
         return document.addEventListener(environment.dom.keys.message, _callback);
     },
     
     invoke:(_key, _data = null) => 
     {
-        return window.parent.postMessage({key:_key, data:_data}, "*");
+        let _message = {key:_key, data:_data};
+        console.log("INVOKE", {_message});
+        return window.parent.postMessage(_message, "*");
     },
 
     toInt: (_value, _def_val) => 
@@ -201,38 +204,37 @@ export const utils =
 }
 
 
-// FUNCTIONS
-//
-// Updates pallette
+//--------------------------------------------------------------------------------------------
+//------------ FUNCTIONS ------------------------------------------------------------------------
 const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
-
-
-// EVENTS
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//------------ EVENTS ------------------------------------------------------------------------
 const events = 
 {
     [environment.localStorage.keys.onPalletteChange]: (data=null) => func_update_pallette(),
 };
-
-
-// Awake()
-const behaviour_awake = () =>
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------
+//------------ BEHAVIOUR FUNCTIONS ---------------------------------------------------------------
+const behaviour_awake = () => // AWAKE
 {
-    window.parent.postMessage()
+    func_update_pallette();
 };
-// Update()
-const behaviour_update = () =>
+const behaviour_update = () => // UPDATE
 {
-    
 };
-// Message()
-const behaviour_message = (message) =>
+const behaviour_message = (message) => // MESSAGE
 {
     console.log("MESSAGE !", {message});
     events[message.key](message.data);
 };
-
-// BEHAVIOURS
-//
+//--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------
+//------------ BEHAVIOURS ------------------------------------------------------------------------
 utils.onload( e => behaviour_awake ); // AWAKE => When loaded is all loaded
 setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
 utils.subscribe(behaviour_message); // Each Message event invoked

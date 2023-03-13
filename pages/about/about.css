@@ -36,6 +36,8 @@ li {
     line-height: 1.6em
 }
 
+*/
+
 #pagemode
 {
     position: fixed; 
@@ -44,7 +46,7 @@ li {
     border: none; 
     width: 30px; 
     height: 30px;
-} */
+} 
 
 img
 {

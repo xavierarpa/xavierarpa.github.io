@@ -178,7 +178,7 @@ export const utils =
         return localStorage.getItem(_key) == null;
     },
 
-    localStorage_isEvent: (_key)  => //Acts as a events, but it requires to be asked to work
+    localStorage_isEvent: (_key)  =>
     {
         if(utils.localStorage_isNull(_key))
         {
@@ -186,8 +186,6 @@ export const utils =
         }
         else
         {
-            console.log(`Event Message for "${_key}": "${utils.localStorage_get(_key)}"`);
-            utils.localStorage_delete(_key);
             return true;
         }
     },
@@ -196,6 +194,15 @@ export const utils =
     {
         if(utils.localStorage_isEvent(_key)) 
         {
+            _callback();
+        }
+    },
+    localStorage_eventDispatch: (_key, _callback)  => 
+    {
+        if(utils.localStorage_isEvent(_key)) 
+        {
+            console.log(`Event Message for "${_key}": "${utils.localStorage_get(_key)}"`);
+            utils.localStorage_delete(_key);
             _callback();
         }
     },
@@ -231,11 +238,19 @@ const behaviour_awake = () =>
 };
 const behaviour_update = () =>
 {
-    behaviour_check_events();
+    behaviour_enter_events();
 };
-const behaviour_check_events = () =>
+const behaviour_lateUpdate = () =>
+{
+    
+};
+const behaviour_enter_events = () =>
 {
     utils.localStorage_event(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
+};
+const behaviour_exit_events = () =>
+{
+    utils.localStorage_eventDispatch(environment.localStorage.keys.onPalletteChange, func_update_pallette); // ~ onPalletteChange
 };
 
 
@@ -245,3 +260,4 @@ const behaviour_check_events = () =>
 //
 utils.onload( e => behaviour_awake ); // AWAKE => When loaded is all loaded
 setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
+setInterval(behaviour_lateUpdate, 20); // UPDATE => 50 FPS => 20ms

@@ -83,5 +83,5 @@
 .timeline-li.timeline-li-cancel::after {
     font-size: 10px;
     border: 2px solid var(--primary);
-    background-color: #ff0000
+    background-color: var(--quartery);
 }

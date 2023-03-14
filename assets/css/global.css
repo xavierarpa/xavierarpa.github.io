@@ -19,11 +19,6 @@
 
     /* FONT */
     --font-apple-system:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    /* --font-inconsolata:        Inconsolata, monospace;
-    --font-cursive: 'VCR', sans-serif;
-    --font-sansserif: 'Chakra Petch', sans-serif;
-    --font-opendyslexic: "Dyslexic", serif;
-    --font-serif: 'Tinos', serif; */
 
     /* Style */
     --font: var(--font-apple-system); /* Font */

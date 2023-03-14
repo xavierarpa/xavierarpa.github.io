@@ -90,10 +90,10 @@
 /* OUTLINE ALT  (NOT DONE) */
 .timeline>ul>li.timeline-outline-alt:not(:last-child)::before 
 {
-    border-left: 3px dotted var(--quartery);
+    border-left: 3px dotted var(--primary);
 }
 .timeline>ul>li.timeline-outline-alt::after
 {
-    border: 2px solid var(--quartery);
+    border: 2px solid var(--primary);
     background-color: var(--quartery);
 }

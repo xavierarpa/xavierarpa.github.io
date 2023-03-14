@@ -109,22 +109,12 @@ export const configs =
                 ],
             },
             {
-                name: "Experimental",
-                values:
-                [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.blue},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.yellow},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.red},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
-                ],
-            },
-            {
                 name: "Hacker",
                 values:
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.green},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.white},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.blue_dark},
                 ],
             },
@@ -143,13 +133,7 @@ export const configs =
 }
 
 
-// pink
-// skyblue
-// white
-
 // const _data = new URLSearchParams(window.location.search).get(K_DATA);
-// console.log(_data);
-
 
 // Funciones
 export const utils =
@@ -251,7 +235,6 @@ const behaviour_update = () => // UPDATE
 };
 const behaviour_message = (message) => 
 {
-    // console.log(message.key, message.data);
     events[message.key](message.data);
 } ;
 //--------------------------------------------------------------------------------------------

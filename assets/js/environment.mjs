@@ -238,7 +238,7 @@ const behaviour_update = () => // UPDATE
 };
 const behaviour_message = (message) => 
 {
-    console.log("MSG", {message});
+    // console.log(message.key, message.data);
     events[message.key](message.data);
 } ;
 //--------------------------------------------------------------------------------------------

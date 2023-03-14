@@ -73,7 +73,7 @@
 
 
 
-/* FILL */
+/* FILL (DONE) */
 .timeline>ul>li.timeline-fill
 {
 
@@ -82,35 +82,47 @@
 {
 
 }
-.timeline>ul>li.timeline-fill::after
+.timeline>ul>li.timeline-fill:not(:last-child)::before 
 {
-
-}
-
-
-/* FILL ALT */
-.timeline>ul>li.timeline-fill
-{
-
-}
-.timeline>ul>li.timeline-fill:before
-{
-
+    border-left: 3px solid var(--primary);
 }
 .timeline>ul>li.timeline-fill::after
 {
-
+    font-size: 10px;
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
 }
 
 
-/* OUTLINE */
+/* FILL ALT  (NOT DONE) */
+.timeline>ul>li.timeline-fill-alt
+{
+    padding-bottom: 15px;
+}
+.timeline>ul>li.timeline-fill-alt:before
+{
+
+}
+.timeline>ul>li.timeline-fill-alt:not(:last-child)::before 
+{
+    border-left: 3px dashed var(--primary);
+}
+.timeline>ul>li.timeline-fill-alt::after
+{
+    font-size: 10px;
+    border: 2px solid var(--tertiary);
+    background-color: var(--quartery);
+}
+
+
+/* OUTLINE  (INCOMING) */
 .timeline>ul>li.timeline-outline
 {
 
 }
 .timeline>ul>li.timeline-outline:before
 {
-
+    border-left: 3px dotted var(--primary);
 }
 .timeline>ul>li.timeline-outline::after
 {
@@ -130,49 +142,4 @@
 .timeline>ul>li.timeline-outline-alt::after
 {
 
-}
-
-
-/* 
-timeline-fill
-timeline-fill-alt
-
-timeline-outline
-timeline-outline-alt
-*/
-
-
-/* KO  */
-.timeline>ul>li.timeline-li-ko::before 
-{
-    border-left: 3px dotted var(--primary);
-}
-
-
-/* OK  */
-.timeline>ul>li.timeline-li-ok:not(:last-child)::before 
-{
-    border-left: 3px solid var(--primary);
-}
-.timeline>ul>li.timeline-li-ok::after {
-    font-size: 10px;
-    border: 2px solid var(--primary);
-    background-color: var(--primary);
-}
-
-
-/* Cancelled */
-.timeline>ul>li.timeline-cancel 
-{
-    padding-bottom: 15px;
-}
-.timeline>ul>li.timeline-cancel:not(:last-child)::before 
-{
-    border-left: 3px dashed var(--primary);
-}
-.timeline>ul>li.timeline-cancel::after 
-{
-    font-size: 10px;
-    border: 2px solid var(--tertiary);
-    background-color: var(--quartery);
 }

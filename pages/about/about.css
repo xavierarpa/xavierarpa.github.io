@@ -53,4 +53,43 @@ img
     border-radius: 50%;
     border: 2px solid var(--primary);
 }
+ 
+
+#toolbar
+{
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+/* .icon-bar 
+{
+    position: absolute;
+    display: grid;
+    gap: 0.5em;
+    margin: 0;
+}
   
+* 
+{
+box-sizing: border-box;
+} */
+
+
+
+/* 
+
+
+<div class="icon-bar" id="toolbar" data-block-clicks="">
+  <div id="open-about" >🔨</div>
+  <div id="zoom" >🔎</div>
+  <div id="center" >🏠</div>
+  <div id="fullscreen"  hidden="">💢</div>
+  <div id="unlocked" data-locked-visibility="hidden" hidden="">🔓</div>
+  <div id="locked" data-locked-visibility="shown">🔒</div>
+  <div id="add-delete-icon" draggable="true" data-locked-visibility="hidden" hidden="">🗃️</div>
+</div>
+
+*/

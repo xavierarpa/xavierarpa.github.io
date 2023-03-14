@@ -125,6 +125,16 @@ export const configs =
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
+            {
+                name: "Old PC",
+                values:
+                [
+                    {k:environment.css.var.primary, v: environment.css.var.colors.green},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.green},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
+                ],
+            },
         ],
     },
 }

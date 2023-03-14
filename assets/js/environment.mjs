@@ -43,6 +43,9 @@ export const environment =
                 green: "--color-green",
                 blue: "--color-blue",
                 yellow: "--color-yellow",
+                cyan: "--color-cyan",
+                magenta: "--color-magenta",
+                blue_dark: "--color-blue-dark",
             },
             fonts:
             {
@@ -71,8 +74,8 @@ export const configs =
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.light},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray_light},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray_dark},
                 ],
             },
             {
@@ -81,28 +84,28 @@ export const configs =
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.black},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.light},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray_dark},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray_light},
                 ],
             },
             {
                 name: "Boogysoft",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.light},       // White
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.red},       // Red
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},     // Yellow
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},      // Black
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.red},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
             {
                 name: "Beegames",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.yellow}, //   Yellow
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.black}, //  Black
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.light}, //   White
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black}, //   Black
+                    {k:environment.css.var.primary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.blue},
                 ],
             },
             {
@@ -121,17 +124,17 @@ export const configs =
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.green},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.green},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.blue_dark},
                 ],
             },
             {
                 name: "Old PC",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.green},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.green},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.blue_dark},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },

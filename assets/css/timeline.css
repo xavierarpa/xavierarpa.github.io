@@ -88,7 +88,7 @@
 .timeline>ul>li.timeline-outline::after
 {
     border: 2px solid var(--primary);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border-radius: 50%;
 }
 

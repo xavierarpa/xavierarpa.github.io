@@ -241,6 +241,9 @@ const behaviour_message = (message) => events[message.key](message.data); // MES
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //------------ BEHAVIOURS --------------------------------------------------------------------
-utils.onload( e => behaviour_awake() ); // AWAKE => When loaded is all loaded
-setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
 utils.subscribe(behaviour_message); // Each Message event invoked
+utils.onload( e => 
+{
+    behaviour_awake(); // AWAKE => When loaded is all loaded
+    setInterval(behaviour_update, 16); // UPDATE => 60 FPS => 16ms
+}); 

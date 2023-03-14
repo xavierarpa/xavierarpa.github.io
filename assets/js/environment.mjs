@@ -79,16 +79,6 @@ export const configs =
                 ],
             },
             {
-                name: "Light",
-                values:
-                [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.light},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray_dark},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray_light},
-                ],
-            },
-            {
                 name: "Boogysoft",
                 values:
                 [
@@ -106,16 +96,6 @@ export const configs =
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.blue},
-                ],
-            },
-            {
-                name: "Hacker",
-                values:
-                [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.green},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.white},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.blue_dark},
                 ],
             },
             {

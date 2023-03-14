@@ -236,7 +236,11 @@ const behaviour_awake = () => // AWAKE
 const behaviour_update = () => // UPDATE
 {
 };
-const behaviour_message = (message) => events[message.key](message.data); // MESSAGE
+const behaviour_message = (message) => 
+{
+    console.log("MSG", {message});
+    events[message.key](message.data);
+} ;
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------

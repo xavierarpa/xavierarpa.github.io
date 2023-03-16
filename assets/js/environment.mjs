@@ -22,6 +22,7 @@ export const environment =
         keys:
         {
             onPalletteChange: "onPalletteChange",
+            onPathChange: "onPathChange",
             pagemode: "pageModeCount"
         }
     },
@@ -188,12 +189,14 @@ export const utils =
 
     // EVENTS
     event_onPalletteChange: () =>  utils.invoke(environment.localStorage.keys.onPalletteChange),
+    event_onPathChange: (path="/") =>  utils.invoke(environment.localStorage.keys.onPathChange, path),
 }
 
 
 //--------------------------------------------------------------------------------------------
 //------------ FUNCTIONS ---------------------------------------------------------------------
 const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
+const func_change_location = (path)=> location=path;
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
@@ -201,6 +204,7 @@ const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localS
 const events = 
 {
     [environment.localStorage.keys.onPalletteChange]: (data=null) => func_update_pallette(),
+    [environment.localStorage.keys.onPathChange]: (data="/") => func_change_location(data),
 };
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------

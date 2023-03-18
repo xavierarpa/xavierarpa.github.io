@@ -28,14 +28,8 @@ utils.onload( event =>
 
 const refreshTextButton  =  () =>
 {
-    
-    let _pallette = configs.pallette.list[get_pagemode()];
-    if(_pallette == null)
-    {
-        console.warn("Error raro en pageMode", get_pagemode(),_pallette);
-    }
-    else
-    {
-        utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${_pallette.name}`;
-    }
+    let index = utils.pallette_index(get_pagemode());
+    let lenght = configs.pallette.list.length;
+    // let _pallette = configs.pallette.list[];
+    utils.id(ID_BUTTON_SWITCH).textContent = `Skin_${index}/${lenght}`;
 }

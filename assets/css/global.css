@@ -76,7 +76,7 @@ img>.icon-profile
     border: none;
     bottom: 20px;
     right: 20px;
-    width: 50px;
+    width: 150px;
     height: 30px;
     z-index: var(--foreground);
     background-color: transparent !important;

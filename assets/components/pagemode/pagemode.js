@@ -2,12 +2,13 @@ import { utils, configs, environment } from "../../js/environment.mjs";
 //
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 //
-const get_pagemode = () => utils.localStorage_get_Int(environment.localStorage.keys.pagemode);
+const get_pagemode = () => utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0);
 const set_pagemode = (val) => utils.localStorage_set(environment.localStorage.keys.pagemode, val);
 
 
 utils.onload( event =>
 {
+
     utils.subscribe(m => 
     {
         if(m.key==environment.localStorage.keys.onPalletteChange)
@@ -16,7 +17,6 @@ utils.onload( event =>
             refreshTextButton();
         }
     }); 
-    
 
     utils.id(ID_BUTTON_SWITCH).onclick = () =>
     {
@@ -25,8 +25,17 @@ utils.onload( event =>
     }
 });
 
+
 const refreshTextButton  =  () =>
 {
-    let _pallette = utils.pallette_current();
-    utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${_pallette.name}`;
+    
+    let _pallette = configs.pallette.list[get_pagemode()];
+    if(_pallette == null)
+    {
+        console.warn("Error raro en pageMode", get_pagemode(),_pallette);
+    }
+    else
+    {
+        utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${_pallette.name}`;
+    }
 }

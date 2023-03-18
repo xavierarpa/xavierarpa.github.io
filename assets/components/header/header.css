@@ -1,2 +1,16 @@
 @import url("/assets/css/global.css");
 
+
+header
+{
+    height: inherit;
+}
+nav
+{
+    gap: 10px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

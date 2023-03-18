@@ -83,13 +83,15 @@ img>.icon-profile
 
 #header
 {
-    /* position: fixed;  */
     border: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
     font-weight: bold;
-    /* left: 50%;
-    bottom: 0; */
     font-size: 1.5em;
-    padding: 0.5em;
+    padding: 0; padding-bottom: 1px;
+    background-color: var(--primary);
     z-index: var(--foreground);
 }
 

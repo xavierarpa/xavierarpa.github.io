@@ -47,6 +47,7 @@ export const environment =
                 cyan: "--color-cyan",
                 magenta: "--color-magenta",
                 blue_dark: "--color-blue-dark",
+                purple: "--color-purple",
             },
             fonts:
             {
@@ -75,8 +76,8 @@ export const configs =
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.light},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.gray_light},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.gray_dark},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.purple},
                 ],
             },
             {

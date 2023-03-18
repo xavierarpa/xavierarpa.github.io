@@ -181,9 +181,14 @@ export const utils =
     },
 
     
+    pallette_index: (changeCounts) => 
+    {
+        return changeCounts % configs.pallette.list.length;
+    },
+
     pallette_change: (changeCounts) => 
     {
-        let _pallette = configs.pallette.list[changeCounts % configs.pallette.list.length];
+        let _pallette = configs.pallette.list[utils.pallette_index(changeCounts)];
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
     },
 

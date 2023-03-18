@@ -1,4 +1,4 @@
-import { utils, environment } from "../../js/environment.mjs";
+import { utils, configs, environment } from "../../js/environment.mjs";
 //
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 //
@@ -8,9 +8,25 @@ const set_pagemode = (val) => utils.localStorage_set(environment.localStorage.ke
 
 utils.onload( event =>
 {
+    utils.subscribe(m => 
+    {
+        if(m.key==environment.localStorage.keys.onPalletteChange)
+        {
+            //Refrescamos
+            refreshTextButton();
+        }
+    }); 
+    
+
     utils.id(ID_BUTTON_SWITCH).onclick = () =>
     {
         set_pagemode(get_pagemode()+1); // Avanzamos la paleta si presiona el botón.
         utils.event_onPalletteChange();
     }
 });
+
+const refreshTextButton  =  () =>
+{
+    let _pallette = configs.pallette.list[utils.pallette_index(changeCounts)];
+    utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${_pallette.name}`;
+}

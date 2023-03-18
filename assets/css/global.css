@@ -71,11 +71,11 @@ img>.icon-profile
 
 #pagemode
 {
-    position: fixed; 
+    position: fixed;
     border: none;
-    bottom: 20px; 
-    right: 20px; 
-    width: 50px; 
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
     height: 30px;
     z-index: var(--foreground);
     background-color: transparent !important;
@@ -83,9 +83,8 @@ img>.icon-profile
 
 #header
 {
-    position: fixed; 
+    /* position: fixed;  */
     border: none;
-    
     font-weight: bold;
     /* left: 50%;
     bottom: 0; */

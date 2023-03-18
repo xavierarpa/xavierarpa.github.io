@@ -2,7 +2,7 @@ import { utils, configs, environment } from "../../js/environment.mjs";
 //
 const ID_BUTTON_SWITCH = 'switch_pageMode';
 //
-const get_pagemode = () => utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0);
+const get_pagemode = () => utils.localStorage_get_Int(environment.localStorage.keys.pagemode);
 const set_pagemode = (val) => utils.localStorage_set(environment.localStorage.keys.pagemode, val);
 
 
@@ -27,6 +27,6 @@ utils.onload( event =>
 
 const refreshTextButton  =  () =>
 {
-    let _pallette = configs.pallette.list[utils.pallette_index(changeCounts)];
+    let _pallette = utils.pallette_current();
     utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${_pallette.name}`;
 }

@@ -171,6 +171,8 @@ export const utils =
         return localStorage.getItem(_key);
     },
 
+    localStorage_get_Int: (_key)  => utils.toInt(utils.localStorage_get(_key, "0"), 0),
+
     localStorage_set: (_key, _value) =>
     {
         localStorage.setItem(_key, utils.toString(_value, ""));
@@ -187,9 +189,15 @@ export const utils =
         return changeCounts % configs.pallette.list.length;
     },
 
-    pallette_change: (changeCounts) => 
+    pallette_current: () => 
     {
-        let _pallette = configs.pallette.list[utils.pallette_index(changeCounts)];
+        return configs.pallette.list[utils.localStorage_get_Int(environment.localStorage.keys.pagemode)];
+    },
+
+
+    pallette_change: () => 
+    {
+        let _pallette = utils.pallette_current();
         for (let i = 0; i < _pallette.values.length; i++)   utils.css_set(_pallette.values[i].k, _pallette.values[i].v);
     },
 
@@ -201,7 +209,7 @@ export const utils =
 
 //--------------------------------------------------------------------------------------------
 //------------ FUNCTIONS ---------------------------------------------------------------------
-const func_update_pallette = ()=> utils.pallette_change(utils.toInt(utils.localStorage_get(environment.localStorage.keys.pagemode, "0"), 0));
+const func_update_pallette = ()=> utils.pallette_change();
 const func_change_location = (path)=> location=path;
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------

@@ -22,4 +22,6 @@ nav
 a
 {
     color: var(--primary);
+    font-size: 22px;
+    font-weight: bold;
 }

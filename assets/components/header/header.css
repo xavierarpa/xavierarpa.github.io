@@ -21,7 +21,7 @@ nav
 }
 a
 {
-    color: var(--primary);
+    color: var(--tertiary);
     font-size: 22px;
     font-weight: bold;
 }

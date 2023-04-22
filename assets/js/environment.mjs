@@ -71,7 +71,7 @@ export const configs =
         list:
         [
             {
-                name: "Dark",
+                name: "Xavier",
                 values:
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.light},

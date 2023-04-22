@@ -8,6 +8,7 @@ const set_pagemode = (val) => utils.localStorage_set(environment.localStorage.ke
 
 utils.onload( event =>
 {
+    refreshTextButton();
 
     utils.subscribe(m => 
     {
@@ -30,6 +31,7 @@ const refreshTextButton  =  () =>
 {
     let index = utils.pallette_index(get_pagemode());
     let lenght = configs.pallette.list.length;
+    
     // let _pallette = configs.pallette.list[];
-    utils.id(ID_BUTTON_SWITCH).textContent = `Skin_${index}/${lenght}`;
+    utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${configs.pallette.list[index].name} - ${index+1}/${lenght}`;
 }

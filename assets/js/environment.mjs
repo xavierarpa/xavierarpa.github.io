@@ -101,7 +101,7 @@ export const configs =
                 ],
             },
             {
-                name: "Old PC",
+                name: "SideQuest",
                 values:
                 [
                     {k:environment.css.var.primary, v: environment.css.var.colors.light},

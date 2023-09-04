@@ -48,6 +48,7 @@ export const environment =
                 magenta: "--color-magenta",
                 blue_dark: "--color-blue-dark",
                 purple: "--color-purple",
+                magenta: "--color-magenta",
             },
             fonts:
             {
@@ -74,18 +75,18 @@ export const configs =
                 name: "Xavier",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.purple},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.purple},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
             {
                 name: "Boogysoft",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.red},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.red},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
@@ -97,7 +98,7 @@ export const configs =
                     {k:environment.css.var.primary, v: environment.css.var.colors.yellow},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.blue},
+                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
             {

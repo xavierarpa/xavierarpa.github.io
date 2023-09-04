@@ -72,12 +72,12 @@ export const configs =
         list:
         [
             {
-                name: "Xavier",
+                name: "Default",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.purple},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.tertiary, v: environment.css.var.colors.magenta},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
@@ -105,8 +105,8 @@ export const configs =
                 name: "SideQuest",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.blue_dark},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.blue_dark},
+                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.yellow},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],

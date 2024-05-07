@@ -32,7 +32,6 @@ export const environment =
         {
             colors:
             {
-                white: "white",
                 light: "--color-light",
                 gray_light: "--color-gray-light",
                 gray_medium_light: "--color-gray-medium-light",

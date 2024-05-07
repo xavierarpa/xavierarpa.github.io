@@ -32,6 +32,7 @@ export const environment =
         {
             colors:
             {
+                white: "white",
                 light: "--color-light",
                 gray_light: "--color-gray-light",
                 gray_medium_light: "--color-gray-medium-light",
@@ -115,7 +116,7 @@ export const configs =
                 name: "??? Studio",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.cyan},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.blue},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},

@@ -75,7 +75,7 @@ export const configs =
                 name: "Default",
                 values:
                 [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.gray_medium},
+                    {k:environment.css.var.primary, v: environment.css.var.colors.light},
                     {k:environment.css.var.secondary, v: environment.css.var.colors.black},
                     {k:environment.css.var.tertiary, v: environment.css.var.colors.light},
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},

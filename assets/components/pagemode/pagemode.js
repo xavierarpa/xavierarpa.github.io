@@ -33,5 +33,5 @@ const refreshTextButton  =  () =>
     let lenght = configs.pallette.list.length;
     
     // let _pallette = configs.pallette.list[];
-    utils.id(ID_BUTTON_SWITCH).textContent = `Skin: ${configs.pallette.list[index].name} - ${index+1}/${lenght}`;
+    utils.id(ID_BUTTON_SWITCH).textContent = `${index+1}: ${configs.pallette.list[index].name}`; // ${index+1}/${lenght}
 }

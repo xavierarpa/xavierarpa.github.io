@@ -111,16 +111,16 @@ export const configs =
                     {k:environment.css.var.quartery, v: environment.css.var.colors.black},
                 ],
             },
-            {
-                name: "??? Studio",
-                values:
-                [
-                    {k:environment.css.var.primary, v: environment.css.var.colors.cyan},
-                    {k:environment.css.var.secondary, v: environment.css.var.colors.black},
-                    {k:environment.css.var.tertiary, v: environment.css.var.colors.blue},
-                    {k:environment.css.var.quartery, v: environment.css.var.colors.black},
-                ],
-            },
+            // {
+            //     name: "??? Studio",
+            //     values:
+            //     [
+            //         {k:environment.css.var.primary, v: environment.css.var.colors.cyan},
+            //         {k:environment.css.var.secondary, v: environment.css.var.colors.black},
+            //         {k:environment.css.var.tertiary, v: environment.css.var.colors.blue},
+            //         {k:environment.css.var.quartery, v: environment.css.var.colors.black},
+            //     ],
+            // },
             {
                 name: "Arpa Games",
                 values:

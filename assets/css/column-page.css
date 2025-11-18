@@ -1,11 +1,13 @@
 .column-page {
     margin-top: 52px;
     padding-bottom: 50px;
+    padding-top: 20px;
     display: grid;
     grid-template-areas: "left content right""left footer right";
     /* background: linear-gradient(to left, var(--primary), var(--secondary)); */
     background: var(--secondary);
-    background-blend-mode: multiply, normal, normal, normal
+    background-blend-mode: multiply, normal, normal, normal;
+    min-height: calc(100vh - 102px);
 }
 @media (min-width:350px) {
     .column-page

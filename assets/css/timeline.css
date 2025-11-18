@@ -24,7 +24,8 @@
 .timeline>ul>li
 {
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    transition: all 0.2s ease;
 }
 .timeline>ul>li:before {
     content: '';
@@ -40,9 +41,15 @@
     position: absolute;
     top: 0;
     left: -44px;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.timeline>ul>li:hover::after {
+    transform: scale(1.3);
+    box-shadow: 0 0 12px rgba(88, 166, 255, 0.6);
 }
 
 
@@ -57,13 +64,18 @@
 
 .timeline>ul>li>p.timeline-title
 {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
 }
 
 .timeline>ul>li>p.timeline-description
 {
-    font-size: 12px;
+    font-size: 13px;
+    color: var(--tertiary);
+    margin-top: 4px;
 }
 
 .timeline>ul>li>p>a
@@ -73,7 +85,7 @@
     padding: 0;
     margin: 0;
     font-weight: 700;
-    color: var(--tertiary);   
+    color: var(--color-accent);   
 }
 
 
@@ -81,33 +93,34 @@
 /* FILL (DONE) */
 .timeline>ul>li.timeline-fill:not(:last-child)::before 
 {
-    border-left: 3px solid var(--primary);
+    border-left: 3px solid var(--color-accent);
 }
 .timeline>ul>li.timeline-fill::after
 {
-    border: 2px solid var(--primary);
-    background-color: var(--primary);
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
 }
 
 
 /* OUTLINE  (INCOMING) */
 .timeline>ul>li.timeline-outline:not(:last-child)::before 
 {
-    border-left: 3px dotted var(--primary);
+    border-left: 3px dotted var(--color-border-emphasis);
 }
 .timeline>ul>li.timeline-outline::after
 {
-    border: 2px solid var(--primary);
+    border: 2px solid var(--color-border-emphasis);
     background-color: var(--secondary);
 }
 
 /* OUTLINE ALT  (NOT DONE) */
 .timeline>ul>li.timeline-outline-alt:not(:last-child)::before 
 {
-    border-left: 3px dotted var(--primary);
+    border-left: 3px dotted var(--tertiary);
 }
 .timeline>ul>li.timeline-outline-alt::after
 {
-    border: 2px solid var(--primary);
+    border: 2px solid var(--tertiary);
     background-color: var(--quartery);
 }

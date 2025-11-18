@@ -1,6 +1,10 @@
 .column-page-content h2 {
     margin-top: 40px;
-    margin-bottom: 15px
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: -0.02em;
 }
 .column-page-content p {
     margin-bottom: 0px;
@@ -15,16 +19,18 @@
 }
 .column-page-content p a {
     text-decoration: none;
-    border-bottom: 2px dotted var(--primary);
+    border-bottom: 1px solid var(--color-accent);
     opacity: 1;
-    color: var(--primary);
+    color: var(--color-accent);
+    transition: all 0.2s ease;
+    padding-bottom: 1px;
 }
 .column-page-content p a:hover {
-    color: var(--primary);
-    background-color: var(--secondary);
-    transition: color .2s ease;
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent-hover);
+    background-color: rgba(88, 166, 255, 0.1);
     font-weight: 700;
-    opacity: 1
+    opacity: 1;
 }
 .column-page-content {
     grid-area: content;

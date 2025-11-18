@@ -5,7 +5,10 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 0;
-    padding-bottom: 0
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .home-header h2 {
@@ -15,10 +18,18 @@
 }
 
 .home-header img {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     border-radius: 100%;
     flex-grow: 0;
     flex-shrink: 0;
-    margin-right: 0
+    margin-right: 0;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.home-header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(88, 166, 255, 0.3);
 }

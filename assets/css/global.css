@@ -66,10 +66,41 @@ body, html
     padding: 0;
 }
 
-img>.icon-profile
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 6px;
+    border: 2px solid var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+/* Text selection styling */
+::selection {
+    background-color: rgba(88, 166, 255, 0.3);
+    color: var(--primary);
+}
+
+::-moz-selection {
+    background-color: rgba(88, 166, 255, 0.3);
+    color: var(--primary);
+}
+
+.icon-profile
 {
     border-radius: 50%;
-    border: 2px solid var(--primary);
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
 }
 
 
